@@ -1,0 +1,1910 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.fmGaugeIssue..Create(BaseForm)
+Gui.fmGaugeIssue..Caption("Gauge Issue Screen")
+Gui.fmGaugeIssue..Size(1244,491)
+Gui.fmGaugeIssue..MinX(0)
+Gui.fmGaugeIssue..MinY(0)
+Gui.fmGaugeIssue..Position(0,0)
+Gui.fmGaugeIssue..AlwaysOnTop(False)
+Gui.fmGaugeIssue..FontName("Tahoma")
+Gui.fmGaugeIssue..FontSize(8.25)
+Gui.fmGaugeIssue..ControlBox(True)
+Gui.fmGaugeIssue..MaxButton(True)
+Gui.fmGaugeIssue..MinButton(True)
+Gui.fmGaugeIssue..MousePointer(0)
+Gui.fmGaugeIssue..Moveable(True)
+Gui.fmGaugeIssue..Sizeable(True)
+Gui.fmGaugeIssue..ShowInTaskBar(True)
+Gui.fmGaugeIssue..TitleBar(True)
+Gui.fmGaugeIssue..Event(UnLoad,fmGaugeIssue_UnLoad)
+Gui.fmGaugeIssue..BackColor(11119017)
+Gui.fmGaugeIssue.lblWO.Create(Label,"WO",True,22,16,0,14,33,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblWO.BorderStyle(0)
+Gui.fmGaugeIssue.lblWO.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblWOSuff.Create(Label,"Suff",True,27,16,0,87,33,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblWOSuff.BorderStyle(0)
+Gui.fmGaugeIssue.lblWOSuff.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblWOSeq.Create(Label,"Seq",True,24,16,0,131,33,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblWOSeq.BorderStyle(0)
+Gui.fmGaugeIssue.lblWOSeq.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblToday.Create(Label,"Issue Date",True,70,16,0,220,33,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblToday.BorderStyle(0)
+Gui.fmGaugeIssue.lblToday.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblTime.Create(Label,"Time",True,29,16,0,311,33,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblTime.BorderStyle(0)
+Gui.fmGaugeIssue.lblTime.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.txtWO.Create(TextBox,"",True,67,20,0,14,50,True,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.txtWO.Event(KeyPressEnter,txtWO_KeyPressEnter)
+Gui.fmGaugeIssue.txtWO.TabStop(True)
+Gui.fmGaugeIssue.txtWO.TabIndex(1)
+Gui.fmGaugeIssue.txtWOSuff.Create(TextBox,"",True,38,20,0,87,50,True,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.txtWOSuff.TabStop(True)
+Gui.fmGaugeIssue.txtWOSuff.TabIndex(2)
+Gui.fmGaugeIssue.txtWOSeq.Create(TextBox,"",True,49,20,0,131,50,True,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.txtWOSeq.TabStop(True)
+Gui.fmGaugeIssue.txtWOSeq.TabIndex(3)
+Gui.fmGaugeIssue.txtTime.Create(TextBox,"",True,85,20,0,311,50,False,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.cmdWOBrw.Create(Button)
+Gui.fmGaugeIssue.cmdWOBrw.Enabled(True)
+Gui.fmGaugeIssue.cmdWOBrw.Visible(True)
+Gui.fmGaugeIssue.cmdWOBrw.Zorder(0)
+Gui.fmGaugeIssue.cmdWOBrw.Size(28,23)
+Gui.fmGaugeIssue.cmdWOBrw.Position(186,48)
+Gui.fmGaugeIssue.cmdWOBrw.Caption("^")
+Gui.fmGaugeIssue.cmdWOBrw.FontName("Tahoma")
+Gui.fmGaugeIssue.cmdWOBrw.FontSize(8.25)
+Gui.fmGaugeIssue.cmdWOBrw.Event(Click,cmdWOBrw_Click)
+Gui.fmGaugeIssue.cmdWOBrw.TabStop(True)
+Gui.fmGaugeIssue.cmdWOBrw.TabIndex(4)
+Gui.fmGaugeIssue.dtpToday.Create(DatePicker)
+Gui.fmGaugeIssue.dtpToday.Enabled(True)
+Gui.fmGaugeIssue.dtpToday.Visible(True)
+Gui.fmGaugeIssue.dtpToday.Zorder(0)
+Gui.fmGaugeIssue.dtpToday.Size(85,20)
+Gui.fmGaugeIssue.dtpToday.Position(220,50)
+Gui.fmGaugeIssue.dtpToday.CheckBox(False)
+Gui.fmGaugeIssue.dtpToday.FontName("Tahoma")
+Gui.fmGaugeIssue.dtpToday.FontSize(8.25)
+Gui.fmGaugeIssue.dtpToday.Event(Change,dtpToday_Change)
+Gui.fmGaugeIssue.dtpToday.TabStop(True)
+Gui.fmGaugeIssue.dtpToday.TabIndex(5)
+Gui.fmGaugeIssue.GsGcGI_New.Create(GsGridControl)
+Gui.fmGaugeIssue.GsGcGI_New.Enabled(True)
+Gui.fmGaugeIssue.GsGcGI_New.Visible(True)
+Gui.fmGaugeIssue.GsGcGI_New.Zorder(0)
+Gui.fmGaugeIssue.GsGcGI_New.Size(808,153)
+Gui.fmGaugeIssue.GsGcGI_New.Position(422,271)
+Gui.fmGaugeIssue.GsGcGI_New.Event(RowCellClick,GsGcGI_New_RowCellClick)
+Gui.fmGaugeIssue.GsGcGI_New.Anchor(15)
+Gui.fmGaugeIssue.GsGcGI_Hist.Create(GsGridControl)
+Gui.fmGaugeIssue.GsGcGI_Hist.Enabled(True)
+Gui.fmGaugeIssue.GsGcGI_Hist.Visible(True)
+Gui.fmGaugeIssue.GsGcGI_Hist.Zorder(0)
+Gui.fmGaugeIssue.GsGcGI_Hist.Size(808,153)
+Gui.fmGaugeIssue.GsGcGI_Hist.Position(422,92)
+Gui.fmGaugeIssue.GsGcGI_Hist.Event(RowCellClick,GsGcGI_Hist_RowCellClick)
+Gui.fmGaugeIssue.GsGcGI_Hist.Anchor(13)
+Gui.fmGaugeIssue.lblGI_New.Create(Label,"Gauges to issue today",True,144,16,0,422,252,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblGI_New.BorderStyle(0)
+Gui.fmGaugeIssue.lblGI_New.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblGI_Hist.Create(Label,"Gauges issued to this WO and Seq previously",True,291,16,0,422,72,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblGI_Hist.BorderStyle(0)
+Gui.fmGaugeIssue.lblGI_Hist.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.cmdAddHist.Create(Button)
+Gui.fmGaugeIssue.cmdAddHist.Enabled(True)
+Gui.fmGaugeIssue.cmdAddHist.Visible(True)
+Gui.fmGaugeIssue.cmdAddHist.Zorder(0)
+Gui.fmGaugeIssue.cmdAddHist.Size(170,23)
+Gui.fmGaugeIssue.cmdAddHist.Position(1060,246)
+Gui.fmGaugeIssue.cmdAddHist.Caption("Add Selected to Today")
+Gui.fmGaugeIssue.cmdAddHist.FontName("Tahoma")
+Gui.fmGaugeIssue.cmdAddHist.FontSize(10)
+Gui.fmGaugeIssue.cmdAddHist.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.cmdAddHist.Event(Click,cmdAddHist_Click)
+Gui.fmGaugeIssue.cmdAddHist.Anchor(9)
+Gui.fmGaugeIssue.cmdEdit.Create(Button)
+Gui.fmGaugeIssue.cmdEdit.Enabled(True)
+Gui.fmGaugeIssue.cmdEdit.Visible(True)
+Gui.fmGaugeIssue.cmdEdit.Zorder(0)
+Gui.fmGaugeIssue.cmdEdit.Size(122,23)
+Gui.fmGaugeIssue.cmdEdit.Position(422,427)
+Gui.fmGaugeIssue.cmdEdit.Caption("Edit Selected")
+Gui.fmGaugeIssue.cmdEdit.FontName("Tahoma")
+Gui.fmGaugeIssue.cmdEdit.FontSize(10)
+Gui.fmGaugeIssue.cmdEdit.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.cmdEdit.Event(Click,cmdEdit_Click)
+Gui.fmGaugeIssue.cmdEdit.Anchor(6)
+Gui.fmGaugeIssue.frameGauge.Create(Frame)
+Gui.fmGaugeIssue.frameGauge.Enabled(True)
+Gui.fmGaugeIssue.frameGauge.Visible(True)
+Gui.fmGaugeIssue.frameGauge.Zorder(0)
+Gui.fmGaugeIssue.frameGauge.Size(384,181)
+Gui.fmGaugeIssue.frameGauge.Position(14,126)
+Gui.fmGaugeIssue.frameGauge.Caption("")
+Gui.fmGaugeIssue.frameGauge.FontName("Tahoma")
+Gui.fmGaugeIssue.frameGauge.FontSize(8.25)
+Gui.fmGaugeIssue.frameGauge.BorderStyle(0)
+Gui.fmGaugeIssue.cmdGaSNBrw.Create(Button)
+Gui.fmGaugeIssue.cmdGaSNBrw.Enabled(True)
+Gui.fmGaugeIssue.cmdGaSNBrw.Visible(True)
+Gui.fmGaugeIssue.cmdGaSNBrw.Zorder(0)
+Gui.fmGaugeIssue.cmdGaSNBrw.Size(28,23)
+Gui.fmGaugeIssue.cmdGaSNBrw.Position(172,16)
+Gui.fmGaugeIssue.cmdGaSNBrw.Caption("^")
+Gui.fmGaugeIssue.cmdGaSNBrw.FontName("Tahoma")
+Gui.fmGaugeIssue.cmdGaSNBrw.FontSize(8.25)
+Gui.fmGaugeIssue.cmdGaSNBrw.Event(Click,cmdGaSNBrw_Click)
+Gui.fmGaugeIssue.cmdGaSNBrw.Parent("frameGauge")
+Gui.fmGaugeIssue.cmdGaSNBrw.TabStop(True)
+Gui.fmGaugeIssue.cmdGaSNBrw.TabIndex(14)
+Gui.fmGaugeIssue.lblDesc2.Create(Label,"Description 2",True,85,16,0,0,77,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblDesc2.BorderStyle(0)
+Gui.fmGaugeIssue.lblDesc2.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblDesc2.Parent("frameGauge")
+Gui.fmGaugeIssue.txtGaSN.Create(TextBox,"",True,166,20,0,0,18,False,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.txtGaSN.Parent("frameGauge")
+Gui.fmGaugeIssue.txtGaSN.Event(LostFocus,txtGaSN_LostFocus)
+Gui.fmGaugeIssue.txtGaSN.TabStop(True)
+Gui.fmGaugeIssue.txtGaSN.TabIndex(13)
+Gui.fmGaugeIssue.txtGaSN.Event(KeyPressEnter,txtGaSN_KeyPressEnter)
+Gui.fmGaugeIssue.lblDesc1.Create(Label,"Gauge Description",True,117,16,0,0,39,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblDesc1.BorderStyle(0)
+Gui.fmGaugeIssue.lblDesc1.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblDesc1.Parent("frameGauge")
+Gui.fmGaugeIssue.lblDesc3.Create(Label,"Description 3",True,85,16,0,0,115,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblDesc3.BorderStyle(0)
+Gui.fmGaugeIssue.lblDesc3.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblDesc3.Parent("frameGauge")
+Gui.fmGaugeIssue.txtCalDue.Create(TextBox,"",True,85,20,0,298,18,False,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.txtCalDue.Parent("frameGauge")
+Gui.fmGaugeIssue.txtCalDue.ControlGroup(1)
+Gui.fmGaugeIssue.lblGaSN.Create(Label,"Gauge SN",True,60,16,0,0,1,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblGaSN.BorderStyle(0)
+Gui.fmGaugeIssue.lblGaSN.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblGaSN.Parent("frameGauge")
+Gui.fmGaugeIssue.lblCalDt.Create(Label,"Cal Date",True,54,16,0,205,1,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblCalDt.BorderStyle(0)
+Gui.fmGaugeIssue.lblCalDt.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblCalDt.Parent("frameGauge")
+Gui.fmGaugeIssue.txtDesc3.Create(TextBox,"",True,383,20,0,0,132,True,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.txtDesc3.Parent("frameGauge")
+Gui.fmGaugeIssue.txtDesc3.ControlGroup(1)
+Gui.fmGaugeIssue.txtDesc3.TabStop(True)
+Gui.fmGaugeIssue.txtDesc3.TabIndex(16)
+Gui.fmGaugeIssue.dtpOutCaldt.Create(DatePicker)
+Gui.fmGaugeIssue.dtpOutCaldt.Enabled(True)
+Gui.fmGaugeIssue.dtpOutCaldt.Visible(True)
+Gui.fmGaugeIssue.dtpOutCaldt.Zorder(0)
+Gui.fmGaugeIssue.dtpOutCaldt.Size(85,20)
+Gui.fmGaugeIssue.dtpOutCaldt.Position(205,18)
+Gui.fmGaugeIssue.dtpOutCaldt.CheckBox(False)
+Gui.fmGaugeIssue.dtpOutCaldt.FontName("Tahoma")
+Gui.fmGaugeIssue.dtpOutCaldt.FontSize(8.25)
+Gui.fmGaugeIssue.dtpOutCaldt.Parent("frameGauge")
+Gui.fmGaugeIssue.txtDesc1.Create(TextBox,"",True,383,20,0,0,56,False,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.txtDesc1.Parent("frameGauge")
+Gui.fmGaugeIssue.txtDesc1.ControlGroup(1)
+Gui.fmGaugeIssue.ddlKBGauge.Create(DropDownList)
+Gui.fmGaugeIssue.ddlKBGauge.Enabled(True)
+Gui.fmGaugeIssue.ddlKBGauge.Visible(True)
+Gui.fmGaugeIssue.ddlKBGauge.Zorder(0)
+Gui.fmGaugeIssue.ddlKBGauge.Size(166,20)
+Gui.fmGaugeIssue.ddlKBGauge.Position(0,18)
+Gui.fmGaugeIssue.ddlKBGauge.FontName("Tahoma")
+Gui.fmGaugeIssue.ddlKBGauge.FontSize(8.25)
+Gui.fmGaugeIssue.ddlKBGauge.Parent("frameGauge")
+Gui.fmGaugeIssue.ddlKBGauge.Event(Change,ddlKBGauge_Change)
+Gui.fmGaugeIssue.ddlKBGauge.ControlGroup(1)
+Gui.fmGaugeIssue.txtCalDt.Create(TextBox,"",True,85,20,0,206,18,False,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.txtCalDt.Parent("frameGauge")
+Gui.fmGaugeIssue.txtCalDt.ControlGroup(1)
+Gui.fmGaugeIssue.txtDesc2.Create(TextBox,"",True,383,20,0,0,94,True,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.txtDesc2.Parent("frameGauge")
+Gui.fmGaugeIssue.txtDesc2.ControlGroup(1)
+Gui.fmGaugeIssue.txtDesc2.TabStop(True)
+Gui.fmGaugeIssue.txtDesc2.TabIndex(15)
+Gui.fmGaugeIssue.lblCalDue.Create(Label,"Cal Due",True,48,16,0,298,1,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblCalDue.BorderStyle(0)
+Gui.fmGaugeIssue.lblCalDue.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblCalDue.Parent("frameGauge")
+Gui.fmGaugeIssue.dtpOutCalDuedt.Create(DatePicker)
+Gui.fmGaugeIssue.dtpOutCalDuedt.Enabled(True)
+Gui.fmGaugeIssue.dtpOutCalDuedt.Visible(True)
+Gui.fmGaugeIssue.dtpOutCalDuedt.Zorder(0)
+Gui.fmGaugeIssue.dtpOutCalDuedt.Size(85,20)
+Gui.fmGaugeIssue.dtpOutCalDuedt.Position(297,18)
+Gui.fmGaugeIssue.dtpOutCalDuedt.CheckBox(False)
+Gui.fmGaugeIssue.dtpOutCalDuedt.FontName("Tahoma")
+Gui.fmGaugeIssue.dtpOutCalDuedt.FontSize(8.25)
+Gui.fmGaugeIssue.dtpOutCalDuedt.Parent("frameGauge")
+Gui.fmGaugeIssue.cmdAdd.Create(Button)
+Gui.fmGaugeIssue.cmdAdd.Enabled(True)
+Gui.fmGaugeIssue.cmdAdd.Visible(True)
+Gui.fmGaugeIssue.cmdAdd.Zorder(0)
+Gui.fmGaugeIssue.cmdAdd.Size(149,23)
+Gui.fmGaugeIssue.cmdAdd.Position(234,155)
+Gui.fmGaugeIssue.cmdAdd.Caption("Add to Issue Date")
+Gui.fmGaugeIssue.cmdAdd.FontName("Tahoma")
+Gui.fmGaugeIssue.cmdAdd.FontSize(10)
+Gui.fmGaugeIssue.cmdAdd.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.cmdAdd.Parent("frameGauge")
+Gui.fmGaugeIssue.cmdAdd.Event(Click,cmdAdd_Click)
+Gui.fmGaugeIssue.cmdRem.Create(Button)
+Gui.fmGaugeIssue.cmdRem.Enabled(True)
+Gui.fmGaugeIssue.cmdRem.Visible(True)
+Gui.fmGaugeIssue.cmdRem.Zorder(0)
+Gui.fmGaugeIssue.cmdRem.Size(122,23)
+Gui.fmGaugeIssue.cmdRem.Position(765,427)
+Gui.fmGaugeIssue.cmdRem.Caption("Remove Selected")
+Gui.fmGaugeIssue.cmdRem.FontName("Tahoma")
+Gui.fmGaugeIssue.cmdRem.FontSize(10)
+Gui.fmGaugeIssue.cmdRem.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.cmdRem.Event(Click,cmdRem_Click)
+Gui.fmGaugeIssue.cmdRem.BackColor(12632319)
+Gui.fmGaugeIssue.cmdRem.Anchor(2)
+Gui.fmGaugeIssue.cmdCommit.Create(Button)
+Gui.fmGaugeIssue.cmdCommit.Enabled(True)
+Gui.fmGaugeIssue.cmdCommit.Visible(True)
+Gui.fmGaugeIssue.cmdCommit.Zorder(0)
+Gui.fmGaugeIssue.cmdCommit.Size(122,23)
+Gui.fmGaugeIssue.cmdCommit.Position(1108,427)
+Gui.fmGaugeIssue.cmdCommit.Caption("Commit && Clear")
+Gui.fmGaugeIssue.cmdCommit.FontName("Tahoma")
+Gui.fmGaugeIssue.cmdCommit.FontSize(10)
+Gui.fmGaugeIssue.cmdCommit.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.cmdCommit.Event(Click,cmdCommit_Click)
+Gui.fmGaugeIssue.cmdCommit.BackColor(12648384)
+Gui.fmGaugeIssue.cmdCommit.Anchor(10)
+Gui.fmGaugeIssue.frameGaOrig.Create(Frame)
+Gui.fmGaugeIssue.frameGaOrig.Enabled(True)
+Gui.fmGaugeIssue.frameGaOrig.Visible(True)
+Gui.fmGaugeIssue.frameGaOrig.Zorder(0)
+Gui.fmGaugeIssue.frameGaOrig.Size(331,24)
+Gui.fmGaugeIssue.frameGaOrig.Position(40,86)
+Gui.fmGaugeIssue.frameGaOrig.Caption("")
+Gui.fmGaugeIssue.frameGaOrig.FontName("Tahoma")
+Gui.fmGaugeIssue.frameGaOrig.FontSize(8.25)
+Gui.fmGaugeIssue.chkOutGauge.Create(CheckBox)
+Gui.fmGaugeIssue.chkOutGauge.Enabled(True)
+Gui.fmGaugeIssue.chkOutGauge.Visible(True)
+Gui.fmGaugeIssue.chkOutGauge.Zorder(0)
+Gui.fmGaugeIssue.chkOutGauge.Size(151,20)
+Gui.fmGaugeIssue.chkOutGauge.Position(172,0)
+Gui.fmGaugeIssue.chkOutGauge.Caption("Outside Gauges")
+Gui.fmGaugeIssue.chkOutGauge.FontName("Tahoma")
+Gui.fmGaugeIssue.chkOutGauge.FontSize(10)
+Gui.fmGaugeIssue.chkOutGauge.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.chkOutGauge.Event(Change,ChkChng)
+Gui.fmGaugeIssue.chkOutGauge.Parent("frameGaOrig")
+Gui.fmGaugeIssue.chkOutGauge.TabStop(True)
+Gui.fmGaugeIssue.chkOutGauge.TabIndex(7)
+Gui.fmGaugeIssue.chkKBGauge.Create(CheckBox)
+Gui.fmGaugeIssue.chkKBGauge.Enabled(True)
+Gui.fmGaugeIssue.chkKBGauge.Visible(True)
+Gui.fmGaugeIssue.chkKBGauge.Zorder(0)
+Gui.fmGaugeIssue.chkKBGauge.Size(126,20)
+Gui.fmGaugeIssue.chkKBGauge.Position(3,0)
+Gui.fmGaugeIssue.chkKBGauge.Caption("K&&B Gauges")
+Gui.fmGaugeIssue.chkKBGauge.FontName("Tahoma")
+Gui.fmGaugeIssue.chkKBGauge.FontSize(10)
+Gui.fmGaugeIssue.chkKBGauge.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.chkKBGauge.Value(1)
+Gui.fmGaugeIssue.chkKBGauge.Event(Change,ChkChng)
+Gui.fmGaugeIssue.chkKBGauge.Parent("frameGaOrig")
+Gui.fmGaugeIssue.chkKBGauge.TabStop(True)
+Gui.fmGaugeIssue.chkKBGauge.TabIndex(6)
+Gui.fmGaugeIssue.cmdReset.Create(Button)
+Gui.fmGaugeIssue.cmdReset.Enabled(True)
+Gui.fmGaugeIssue.cmdReset.Visible(True)
+Gui.fmGaugeIssue.cmdReset.Zorder(0)
+Gui.fmGaugeIssue.cmdReset.Size(122,23)
+Gui.fmGaugeIssue.cmdReset.Position(1108,4)
+Gui.fmGaugeIssue.cmdReset.Caption("Reset Form")
+Gui.fmGaugeIssue.cmdReset.FontName("Tahoma")
+Gui.fmGaugeIssue.cmdReset.FontSize(10)
+Gui.fmGaugeIssue.cmdReset.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.cmdReset.BackColor(12632319)
+Gui.fmGaugeIssue.cmdReset.Event(Click,ClearForm)
+Gui.fmGaugeIssue.cmdReset.Anchor(9)
+Gui.fmGaugeIssue.frameReports.Create(Frame)
+Gui.fmGaugeIssue.frameReports.Enabled(True)
+Gui.fmGaugeIssue.frameReports.Visible(True)
+Gui.fmGaugeIssue.frameReports.Zorder(0)
+Gui.fmGaugeIssue.frameReports.Size(384,139)
+Gui.fmGaugeIssue.frameReports.Position(14,311)
+Gui.fmGaugeIssue.frameReports.Caption("Reports")
+Gui.fmGaugeIssue.frameReports.FontName("Tahoma")
+Gui.fmGaugeIssue.frameReports.FontSize(10)
+Gui.fmGaugeIssue.frameReports.BorderStyle(1)
+Gui.fmGaugeIssue.frameReports.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.chkRepRemDt.Create(CheckBox)
+Gui.fmGaugeIssue.chkRepRemDt.Enabled(True)
+Gui.fmGaugeIssue.chkRepRemDt.Visible(True)
+Gui.fmGaugeIssue.chkRepRemDt.Zorder(0)
+Gui.fmGaugeIssue.chkRepRemDt.Size(209,20)
+Gui.fmGaugeIssue.chkRepRemDt.Position(161,78)
+Gui.fmGaugeIssue.chkRepRemDt.Caption("Remove Date Constraint")
+Gui.fmGaugeIssue.chkRepRemDt.FontName("Tahoma")
+Gui.fmGaugeIssue.chkRepRemDt.FontSize(10)
+Gui.fmGaugeIssue.chkRepRemDt.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.chkRepRemDt.Parent("frameReports")
+Gui.fmGaugeIssue.chkRepRemDt.Event(Click,RepChkChng)
+Gui.fmGaugeIssue.lblRepWOSuffSeq.Create(Label,"WO-Suff-Seq",True,84,16,0,157,32,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblRepWOSuffSeq.BorderStyle(0)
+Gui.fmGaugeIssue.lblRepWOSuffSeq.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblRepWOSuffSeq.Parent("frameReports")
+Gui.fmGaugeIssue.chkWOToGa.Create(CheckBox)
+Gui.fmGaugeIssue.chkWOToGa.Enabled(True)
+Gui.fmGaugeIssue.chkWOToGa.Visible(True)
+Gui.fmGaugeIssue.chkWOToGa.Zorder(0)
+Gui.fmGaugeIssue.chkWOToGa.Size(154,20)
+Gui.fmGaugeIssue.chkWOToGa.Position(1,55)
+Gui.fmGaugeIssue.chkWOToGa.Caption("WO to Gauge")
+Gui.fmGaugeIssue.chkWOToGa.FontName("Tahoma")
+Gui.fmGaugeIssue.chkWOToGa.FontSize(10)
+Gui.fmGaugeIssue.chkWOToGa.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.chkWOToGa.Parent("frameReports")
+Gui.fmGaugeIssue.chkWOToGa.Event(Click,RepChkChng)
+Gui.fmGaugeIssue.lblRepGaSN.Create(Label,"Gauge SN",True,60,16,0,161,57,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblRepGaSN.BorderStyle(0)
+Gui.fmGaugeIssue.lblRepGaSN.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblRepGaSN.Parent("frameReports")
+Gui.fmGaugeIssue.lblRepStrt.Create(Label,"Start Date",True,69,16,0,1,101,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblRepStrt.BorderStyle(0)
+Gui.fmGaugeIssue.lblRepStrt.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblRepStrt.Parent("frameReports")
+Gui.fmGaugeIssue.dtpRepStrt.Create(DatePicker)
+Gui.fmGaugeIssue.dtpRepStrt.Enabled(True)
+Gui.fmGaugeIssue.dtpRepStrt.Visible(True)
+Gui.fmGaugeIssue.dtpRepStrt.Zorder(0)
+Gui.fmGaugeIssue.dtpRepStrt.Size(85,20)
+Gui.fmGaugeIssue.dtpRepStrt.Position(1,118)
+Gui.fmGaugeIssue.dtpRepStrt.CheckBox(False)
+Gui.fmGaugeIssue.dtpRepStrt.FontName("Tahoma")
+Gui.fmGaugeIssue.dtpRepStrt.FontSize(8.25)
+Gui.fmGaugeIssue.dtpRepStrt.Parent("frameReports")
+Gui.fmGaugeIssue.dtpRepEnd.Create(DatePicker)
+Gui.fmGaugeIssue.dtpRepEnd.Enabled(True)
+Gui.fmGaugeIssue.dtpRepEnd.Visible(True)
+Gui.fmGaugeIssue.dtpRepEnd.Zorder(0)
+Gui.fmGaugeIssue.dtpRepEnd.Size(85,20)
+Gui.fmGaugeIssue.dtpRepEnd.Position(106,118)
+Gui.fmGaugeIssue.dtpRepEnd.CheckBox(False)
+Gui.fmGaugeIssue.dtpRepEnd.FontName("Tahoma")
+Gui.fmGaugeIssue.dtpRepEnd.FontSize(8.25)
+Gui.fmGaugeIssue.dtpRepEnd.Parent("frameReports")
+Gui.fmGaugeIssue.txtRepWOSuffSeq.Create(TextBox,"",True,100,20,0,252,31,True,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.txtRepWOSuffSeq.Parent("frameReports")
+Gui.fmGaugeIssue.chkInspToGa.Create(CheckBox)
+Gui.fmGaugeIssue.chkInspToGa.Enabled(True)
+Gui.fmGaugeIssue.chkInspToGa.Visible(True)
+Gui.fmGaugeIssue.chkInspToGa.Zorder(0)
+Gui.fmGaugeIssue.chkInspToGa.Size(158,20)
+Gui.fmGaugeIssue.chkInspToGa.Position(1,78)
+Gui.fmGaugeIssue.chkInspToGa.Caption("Inspector to Gauge")
+Gui.fmGaugeIssue.chkInspToGa.FontName("Tahoma")
+Gui.fmGaugeIssue.chkInspToGa.FontSize(10)
+Gui.fmGaugeIssue.chkInspToGa.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.chkInspToGa.Parent("frameReports")
+Gui.fmGaugeIssue.chkInspToGa.Event(Click,RepChkChng)
+Gui.fmGaugeIssue.lblRepEnd.Create(Label,"End Date",True,58,16,0,106,101,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblRepEnd.BorderStyle(0)
+Gui.fmGaugeIssue.lblRepEnd.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblRepEnd.Parent("frameReports")
+Gui.fmGaugeIssue.txtRepGaSN.Create(TextBox,"",True,100,20,0,252,55,True,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.txtRepGaSN.Parent("frameReports")
+Gui.fmGaugeIssue.chkGaToWo.Create(CheckBox)
+Gui.fmGaugeIssue.chkGaToWo.Enabled(True)
+Gui.fmGaugeIssue.chkGaToWo.Visible(True)
+Gui.fmGaugeIssue.chkGaToWo.Zorder(0)
+Gui.fmGaugeIssue.chkGaToWo.Size(144,20)
+Gui.fmGaugeIssue.chkGaToWo.Position(1,30)
+Gui.fmGaugeIssue.chkGaToWo.Caption("Gauges To WO")
+Gui.fmGaugeIssue.chkGaToWo.FontName("Tahoma")
+Gui.fmGaugeIssue.chkGaToWo.FontSize(10)
+Gui.fmGaugeIssue.chkGaToWo.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.chkGaToWo.Parent("frameReports")
+Gui.fmGaugeIssue.chkGaToWo.Event(Click,RepChkChng)
+Gui.fmGaugeIssue.cmdRepWOBrw.Create(Button)
+Gui.fmGaugeIssue.cmdRepWOBrw.Enabled(True)
+Gui.fmGaugeIssue.cmdRepWOBrw.Visible(True)
+Gui.fmGaugeIssue.cmdRepWOBrw.Zorder(0)
+Gui.fmGaugeIssue.cmdRepWOBrw.Size(28,23)
+Gui.fmGaugeIssue.cmdRepWOBrw.Position(355,30)
+Gui.fmGaugeIssue.cmdRepWOBrw.Caption("^")
+Gui.fmGaugeIssue.cmdRepWOBrw.FontName("Tahoma")
+Gui.fmGaugeIssue.cmdRepWOBrw.FontSize(8.25)
+Gui.fmGaugeIssue.cmdRepWOBrw.Parent("frameReports")
+Gui.fmGaugeIssue.cmdRepWOBrw.Event(Click,cmdRepWOBrw_Click)
+Gui.fmGaugeIssue.cmdPrint.Create(Button)
+Gui.fmGaugeIssue.cmdPrint.Enabled(True)
+Gui.fmGaugeIssue.cmdPrint.Visible(True)
+Gui.fmGaugeIssue.cmdPrint.Zorder(0)
+Gui.fmGaugeIssue.cmdPrint.Size(75,23)
+Gui.fmGaugeIssue.cmdPrint.Position(308,116)
+Gui.fmGaugeIssue.cmdPrint.Caption("")
+Gui.fmGaugeIssue.cmdPrint.FontName("Tahoma")
+Gui.fmGaugeIssue.cmdPrint.FontSize(10)
+Gui.fmGaugeIssue.cmdPrint.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.cmdPrint.SvgPicture("icon_printer_color")
+Gui.fmGaugeIssue.cmdPrint.Parent("frameReports")
+Gui.fmGaugeIssue.cmdPrint.Event(Click,cmdPrint_Click)
+Gui.fmGaugeIssue.cmdPrint.Anchor(10)
+Gui.fmGaugeIssue.cmdPrint.ImageAlign(8)
+Gui.fmGaugeIssue.cmdGaSNBrw2.Create(Button)
+Gui.fmGaugeIssue.cmdGaSNBrw2.Enabled(True)
+Gui.fmGaugeIssue.cmdGaSNBrw2.Visible(True)
+Gui.fmGaugeIssue.cmdGaSNBrw2.Zorder(0)
+Gui.fmGaugeIssue.cmdGaSNBrw2.Size(28,23)
+Gui.fmGaugeIssue.cmdGaSNBrw2.Position(355,54)
+Gui.fmGaugeIssue.cmdGaSNBrw2.Caption("^")
+Gui.fmGaugeIssue.cmdGaSNBrw2.FontName("Tahoma")
+Gui.fmGaugeIssue.cmdGaSNBrw2.FontSize(8.25)
+Gui.fmGaugeIssue.cmdGaSNBrw2.Parent("frameReports")
+Gui.fmGaugeIssue.cmdGaSNBrw2.Event(Click,cmdGaSNBrw_Click)
+Gui.fmGaugeIssue.dtpHistWO.Create(DatePicker)
+Gui.fmGaugeIssue.dtpHistWO.Enabled(True)
+Gui.fmGaugeIssue.dtpHistWO.Visible(True)
+Gui.fmGaugeIssue.dtpHistWO.Zorder(0)
+Gui.fmGaugeIssue.dtpHistWO.Size(85,20)
+Gui.fmGaugeIssue.dtpHistWO.Position(422,50)
+Gui.fmGaugeIssue.dtpHistWO.TabStop(True)
+Gui.fmGaugeIssue.dtpHistWO.TabIndex(8)
+Gui.fmGaugeIssue.dtpHistWO.CheckBox(False)
+Gui.fmGaugeIssue.dtpHistWO.FontName("Tahoma")
+Gui.fmGaugeIssue.dtpHistWO.FontSize(8.25)
+Gui.fmGaugeIssue.cmdHistWOBrw.Create(Button)
+Gui.fmGaugeIssue.cmdHistWOBrw.Enabled(True)
+Gui.fmGaugeIssue.cmdHistWOBrw.Visible(True)
+Gui.fmGaugeIssue.cmdHistWOBrw.Zorder(0)
+Gui.fmGaugeIssue.cmdHistWOBrw.Size(28,23)
+Gui.fmGaugeIssue.cmdHistWOBrw.Position(685,48)
+Gui.fmGaugeIssue.cmdHistWOBrw.TabStop(True)
+Gui.fmGaugeIssue.cmdHistWOBrw.TabIndex(12)
+Gui.fmGaugeIssue.cmdHistWOBrw.Caption("^")
+Gui.fmGaugeIssue.cmdHistWOBrw.FontName("Tahoma")
+Gui.fmGaugeIssue.cmdHistWOBrw.FontSize(8.25)
+Gui.fmGaugeIssue.cmdHistWOBrw.Event(Click,cmdHistWOBrw_Click)
+Gui.fmGaugeIssue.txtHistWOSeq.Create(TextBox,"",True,49,20,0,630,50,True,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.txtHistWOSeq.TabStop(True)
+Gui.fmGaugeIssue.txtHistWOSeq.TabIndex(11)
+Gui.fmGaugeIssue.txtHistWOSeq.Event(Change,txtHistWOSeq_Change)
+Gui.fmGaugeIssue.txtHistWOSeq.Event(LostFocus,txtHistWOSeq_LostFocus)
+Gui.fmGaugeIssue.txtHistWOSuff.Create(TextBox,"",True,38,20,0,586,50,True,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.txtHistWOSuff.TabStop(True)
+Gui.fmGaugeIssue.txtHistWOSuff.TabIndex(10)
+Gui.fmGaugeIssue.txtHistWO.Create(TextBox,"",True,67,20,0,513,50,True,0,"Tahoma",8.25,,1)
+Gui.fmGaugeIssue.txtHistWO.TabStop(True)
+Gui.fmGaugeIssue.txtHistWO.TabIndex(9)
+Gui.fmGaugeIssue.txtHistWO.Event(KeyPressEnter,txtHistWO_KeyPressEnter)
+Gui.fmGaugeIssue.lblHistWODate.Create(Label,"Date",True,31,16,0,422,33,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblHistWODate.BorderStyle(0)
+Gui.fmGaugeIssue.lblHistWODate.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblHistWOSeq.Create(Label,"Seq",True,24,16,0,630,33,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblHistWOSeq.BorderStyle(0)
+Gui.fmGaugeIssue.lblHistWOSeq.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblHistWOSuff.Create(Label,"Suff",True,27,16,0,586,33,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblHistWOSuff.BorderStyle(0)
+Gui.fmGaugeIssue.lblHistWOSuff.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblHistWO.Create(Label,"WO",True,22,16,0,513,33,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblHistWO.BorderStyle(0)
+Gui.fmGaugeIssue.lblHistWO.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.lblIssToday.Create(Label,"Select Work Order Sequence to issue gauges against",True,344,16,0,14,8,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblIssToday.BorderStyle(0)
+Gui.fmGaugeIssue.lblIssToday.FontStyle(True,False,True,False,False)
+Gui.fmGaugeIssue.lblIssToday2.Create(Label,"Select previous Work Order Sequence to copy gauge issue",True,380,16,0,422,8,True,0,"Tahoma",10,,0,0)
+Gui.fmGaugeIssue.lblIssToday2.BorderStyle(0)
+Gui.fmGaugeIssue.lblIssToday2.FontStyle(True,False,True,False,False)
+Gui.fmGaugeIssue.cmdSelAll.Create(Button)
+Gui.fmGaugeIssue.cmdSelAll.Enabled(True)
+Gui.fmGaugeIssue.cmdSelAll.Visible(True)
+Gui.fmGaugeIssue.cmdSelAll.Zorder(0)
+Gui.fmGaugeIssue.cmdSelAll.Size(95,23)
+Gui.fmGaugeIssue.cmdSelAll.Position(779,48)
+Gui.fmGaugeIssue.cmdSelAll.Caption("Select All")
+Gui.fmGaugeIssue.cmdSelAll.FontName("Tahoma")
+Gui.fmGaugeIssue.cmdSelAll.FontSize(10)
+Gui.fmGaugeIssue.cmdSelAll.FontStyle(True,False,False,False,False)
+Gui.fmGaugeIssue.cmdSelAll.Event(Click,cmdSelAll_Click)
+Gui.fmGaugeIssue.frameDiv.Create(Frame)
+Gui.fmGaugeIssue.frameDiv.Enabled(True)
+Gui.fmGaugeIssue.frameDiv.Visible(True)
+Gui.fmGaugeIssue.frameDiv.Zorder(0)
+Gui.fmGaugeIssue.frameDiv.Size(5,441)
+Gui.fmGaugeIssue.frameDiv.Position(408,8)
+Gui.fmGaugeIssue.frameDiv.Caption("")
+Gui.fmGaugeIssue.frameDiv.FontName("Tahoma")
+Gui.fmGaugeIssue.frameDiv.FontSize(8.25)
+Gui.fmGaugeIssue.frameDiv.BackColor(13882323)
+Gui.fmGaugeIssue.frameDiv.Anchor(7)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'TJS, August 2021
+'Customer: K&B Machine Works
+'Quote: 12820
+'BUSINESS CASE: The basis of the program is to track what gauges were used on which work orders. The gauges are stored in a custom table with a serial number. The usage of these gauges will be stored in a history table. This is not an issue / return type of transaction, just a recording of it's usage.
+
+F.Intrinsic.Control.Try
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+V.Local.sSQL.Declare
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+Gui.fmGaugeIssue.chkOutGauge.Value(0)
+Gui.fmGaugeIssue.lblGaSN.Caption("K&&B Gauge SN")
+Gui.fmGaugeIssue.ddlKBGauge.Visible(True)
+Gui.fmGaugeIssue.txtGaSN.Visible(False)
+Gui.fmGaugeIssue.cmdGaSNBrw.Enabled(True)
+Gui.fmGaugeIssue.txtGaSN.Enabled(False)
+Gui.fmGaugeIssue.txtDesc1.Enabled(False)
+Gui.fmGaugeIssue.txtCalDt.Enabled(False)
+Gui.fmGaugeIssue.txtCalDue.Enabled(False)
+Gui.fmGaugeIssue.txtCalDt.Visible(True)
+Gui.fmGaugeIssue.txtCalDue.Visible(True)
+Gui.fmGaugeIssue.dtpOutCaldt.Visible(False)
+Gui.fmGaugeIssue.dtpOutCalDuedt.Visible(False)
+Gui.fmGaugeIssue.ddlKBGauge.Text("")
+Gui.fmGaugeIssue.txtGaSN.Text("")
+Gui.fmGaugeIssue.txtDesc1.Text("")
+Gui.fmGaugeIssue.txtCalDt.Text("")
+Gui.fmGaugeIssue.txtCalDue.Text("")
+Gui.fmGaugeIssue.lblRepWOSuffSeq.Visible(False)
+Gui.fmGaugeIssue.cmdRepWOBrw.Visible(False)
+Gui.fmGaugeIssue.txtRepWOSuffSeq.Visible(False)
+Gui.fmGaugeIssue.lblRepGaSN.Visible(False)
+Gui.fmGaugeIssue.txtRepGaSN.Visible(False)
+Gui.fmGaugeIssue.cmdGaSNBrw2.Visible(False)
+Gui.fmGaugeIssue.chkRepRemDt.Visible(False)
+Gui.fmGaugeIssue.lblRepStrt.Visible(False)
+Gui.fmGaugeIssue.dtpRepStrt.Visible(False)
+Gui.fmGaugeIssue.lblRepEnd.Visible(False)
+Gui.fmGaugeIssue.dtpRepEnd.Visible(False)
+Gui.fmGaugeIssue.cmdPrint.Visible(False)
+
+F.Intrinsic.String.Build("Select RTRIM(ControlNum),RTRIM(ControlNum) from GCG_6437_GAUGE_INFO where NextCalDate > '{0}' order by ControlNum ",V.Ambient.Date.PervasiveDate,V.Local.sSQL)
+
+F.Intrinsic.Control.CallSub(ODBC,"State","OPEN")
+F.Data.Dictionary.CreateFromSQL("dictKBGauges","conts",V.Local.sSQL)
+F.Intrinsic.Control.CallSub(ODBC,"State","CLOSE")
+
+Gui.fmGaugeIssue.frameGaOrig.Enabled(False)
+Gui.fmGaugeIssue.frameGauge.Enabled(False)
+
+Gui.fmGaugeIssue.ddlKBGauge.AddItem(" ",0)
+Gui.fmGaugeIssue.ddlKBGauge.AddItems("Dictionary","dictKBGauges")
+
+F.Data.DataTable.Create("dtMainHist",True)
+F.Data.DataTable.AddColumn("dtMainHist","Sel","Boolean",False)
+F.Data.DataTable.AddColumn("dtMainHist","Gauge_SN","String")
+F.Data.DataTable.AddColumn("dtMainHist","Desc_1","String")
+F.Data.DataTable.AddColumn("dtMainHist","Desc_2","String")
+F.Data.DataTable.AddColumn("dtMainHist","Desc_3","String")
+F.Data.DataTable.AddColumn("dtMainHist","WO","String")
+F.Data.DataTable.AddColumn("dtMainHist","WO_Suff","String")
+F.Data.DataTable.AddColumn("dtMainHist","WO_Seq","String")
+F.Data.DataTable.AddColumn("dtMainHist","Cal_Date","String")
+F.Data.DataTable.AddColumn("dtMainHist","Cal_Due","String")
+F.Data.DataTable.AddColumn("dtMainHist","Iss_Date","String")
+F.Data.DataTable.AddColumn("dtMainHist","Iss_Time","String")
+F.Data.DataTable.AddColumn("dtMainHist","Iss_By","String")
+F.Data.DataTable.AddColumn("dtMainHist","Gauge_Owner","String")
+
+F.Intrinsic.Control.CallSub(GridView,"Grid","GsGcGI_Hist","GridView","gvMainHist","DataTable","dtMainHist")
+
+F.Data.DataTable.Create("dtMainCurr",True)
+F.Data.DataTable.AddColumn("dtMainCurr","Sel","Boolean",False)
+F.Data.DataTable.AddColumn("dtMainCurr","Gauge_SN","String")
+F.Data.DataTable.AddColumn("dtMainCurr","Desc_1","String")
+F.Data.DataTable.AddColumn("dtMainCurr","Desc_2","String")
+F.Data.DataTable.AddColumn("dtMainCurr","Desc_3","String")
+F.Data.DataTable.AddColumn("dtMainCurr","WO","String")
+F.Data.DataTable.AddColumn("dtMainCurr","WO_Suff","String")
+F.Data.DataTable.AddColumn("dtMainCurr","WO_Seq","String")
+F.Data.DataTable.AddColumn("dtMainCurr","Cal_Date","String")
+F.Data.DataTable.AddColumn("dtMainCurr","Cal_Due","String")
+F.Data.DataTable.AddColumn("dtMainCurr","Iss_Date","String")
+F.Data.DataTable.AddColumn("dtMainCurr","Iss_Time","String")
+F.Data.DataTable.AddColumn("dtMainCurr","Iss_By","String")
+F.Data.DataTable.AddColumn("dtMainCurr","Gauge_Owner","String")
+
+F.Intrinsic.Control.CallSub(GridView,"Grid","GsGcGI_New","GridView","gvMainCurr","DataTable","dtMainCurr")
+
+Gui.fmGaugeIssue..Show
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.GridView.Start
+F.Intrinsic.Control.Try
+
+Gui.fmGaugeIssue.[V.Args.Grid].AddGridviewFromDatatable(V.Args.GridView,V.Args.DataTable)
+
+Gui.fmGaugeIssue.[V.Args.Grid].SuspendLayout
+
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Sel","HeaderFontBold",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Gauge_SN","HeaderFontBold",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_1","HeaderFontBold",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_2","HeaderFontBold",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_3","HeaderFontBold",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO","HeaderFontBold",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO_Suff","HeaderFontBold",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO_Seq","HeaderFontBold",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Cal_Date","HeaderFontBold",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Cal_Due","HeaderFontBold",True)
+
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Sel","Caption","Sel")
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Gauge_SN","Caption","Gauge SN")
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_1","Caption","Guage Desc")
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_2","Caption","Desc 2")
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_3","Caption","Desc 3")
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO","Caption","WO")
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO_Suff","Caption","WO Suff")
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO_Seq","Caption","WO Seq")
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Cal_Date","Caption","Cal Date")
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Cal_Due","Caption","Cal Due")
+
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Sel","HeaderBackColor",V.Enum.ThemeColors!ThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Gauge_SN","HeaderBackColor",V.Enum.ThemeColors!ThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_1","HeaderBackColor",V.Enum.ThemeColors!ThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_2","HeaderBackColor",V.Enum.ThemeColors!ThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_3","HeaderBackColor",V.Enum.ThemeColors!ThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO","HeaderBackColor",V.Enum.ThemeColors!ThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO_Suff","HeaderBackColor",V.Enum.ThemeColors!ThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO_Seq","HeaderBackColor",V.Enum.ThemeColors!ThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Cal_Date","HeaderBackColor",V.Enum.ThemeColors!ThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Cal_Due","HeaderBackColor",V.Enum.ThemeColors!ThemeColor)
+
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Sel","HeaderForeColor",V.Enum.ThemeColors!TextOnThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Gauge_SN","HeaderForeColor",V.Enum.ThemeColors!TextOnThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_1","HeaderForeColor",V.Enum.ThemeColors!TextOnThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_2","HeaderForeColor",V.Enum.ThemeColors!TextOnThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_3","HeaderForeColor",V.Enum.ThemeColors!TextOnThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO","HeaderForeColor",V.Enum.ThemeColors!TextOnThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO_Suff","HeaderForeColor",V.Enum.ThemeColors!TextOnThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO_Seq","HeaderForeColor",V.Enum.ThemeColors!TextOnThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Cal_Date","HeaderForeColor",V.Enum.ThemeColors!TextOnThemeColor)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Cal_Due","HeaderForeColor",V.Enum.ThemeColors!TextOnThemeColor)
+
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Sel","AllowEdit",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Gauge_SN","AllowEdit",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_1","AllowEdit",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_2","AllowEdit",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_3","AllowEdit",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO","AllowEdit",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO_Suff","AllowEdit",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO_Seq","AllowEdit",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Cal_Date","AllowEdit",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Cal_Due","AllowEdit",False)
+
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Sel","ReadOnly",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Gauge_SN","ReadOnly",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_1","ReadOnly",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_2","ReadOnly",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Desc_3","ReadOnly",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO","ReadOnly",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO_Suff","ReadOnly",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"WO_Seq","ReadOnly",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Cal_Date","ReadOnly",True)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Cal_Due","ReadOnly",True)
+
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Sel","Width",40)
+
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Iss_By","Visible",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Iss_Date","Visible",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Iss_Time","Visible",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Gauge_Owner","Visible",False)
+
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Iss_By","AllowShowHide",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Iss_Date","AllowShowHide",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Iss_Time","AllowShowHide",False)
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Gauge_Owner","AllowShowHide",False)
+
+Gui.fmGaugeIssue.[V.Args.Grid].SetColumnProperty(V.Args.GridView,"Cal_Date","DisplayCustomDateTime","d")
+
+Gui.fmGaugeIssue.[V.Args.Grid].MainView(V.Args.GridView)
+
+Gui.fmGaugeIssue.[V.Args.Grid].ResumeLayout
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.GridView.End
+
+Program.Sub.ChkChng.Start
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.BlockEvents
+F.Intrinsic.Control.SelectCase(V.Args.ControlName)
+	F.Intrinsic.Control.Case(CHKKBGAUGE)
+		F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!chkKBGauge.Value,=,1)
+			Gui.fmGaugeIssue.chkOutGauge.Value(0)
+			Gui.fmGaugeIssue.lblGaSN.Caption("K&&B Gauge SN")
+			Gui.fmGaugeIssue.ddlKBGauge.Visible(True)
+			'Gui.fmGaugeIssue.ddlKBGauge.SetFocus(True)
+			Gui.fmGaugeIssue.txtGaSN.Visible(False)
+			Gui.fmGaugeIssue.cmdGaSNBrw.Enabled(True)
+			Gui.fmGaugeIssue.txtGaSN.Enabled(False)
+			Gui.fmGaugeIssue.txtDesc1.Enabled(False)
+			Gui.fmGaugeIssue.txtCalDt.Enabled(False)
+			Gui.fmGaugeIssue.txtCalDue.Enabled(False)
+			Gui.fmGaugeIssue.txtCalDt.Visible(True)
+			Gui.fmGaugeIssue.txtCalDue.Visible(True)
+			Gui.fmGaugeIssue.dtpOutCaldt.Visible(False)
+			Gui.fmGaugeIssue.dtpOutCalDuedt.Visible(False)
+			Gui.fmGaugeIssue.ddlKBGauge.Text("")
+			Gui.fmGaugeIssue.txtGaSN.Text("")
+			Gui.fmGaugeIssue.txtDesc1.Text("")
+			Gui.fmGaugeIssue.txtDesc2.Text("")
+			Gui.fmGaugeIssue.txtDesc3.Text("")
+			Gui.fmGaugeIssue.txtCalDt.Text("")
+			Gui.fmGaugeIssue.txtCalDue.Text("")
+		F.Intrinsic.Control.Else
+			Gui.fmGaugeIssue.chkOutGauge.Value(1)
+			Gui.fmGaugeIssue.lblGaSN.Caption("Outside Gauge SN")
+			Gui.fmGaugeIssue.ddlKBGauge.Visible(False)
+			Gui.fmGaugeIssue.txtGaSN.Visible(True)
+			'Gui.fmGaugeIssue.txtGaSN.SetFocus(True)
+			Gui.fmGaugeIssue.cmdGaSNBrw.Enabled(False)
+			Gui.fmGaugeIssue.txtGaSN.Enabled(True)
+			Gui.fmGaugeIssue.txtDesc1.Enabled(True)
+			Gui.fmGaugeIssue.txtCalDt.Enabled(True)
+			Gui.fmGaugeIssue.txtCalDue.Enabled(True)
+			Gui.fmGaugeIssue.txtCalDt.Visible(False)
+			Gui.fmGaugeIssue.txtCalDue.Visible(False)
+			Gui.fmGaugeIssue.dtpOutCaldt.Visible(True)
+			Gui.fmGaugeIssue.dtpOutCalDuedt.Visible(True)
+			Gui.fmGaugeIssue.ddlKBGauge.Text("")
+			Gui.fmGaugeIssue.txtGaSN.Text("")
+			Gui.fmGaugeIssue.txtDesc1.Text("")
+			Gui.fmGaugeIssue.txtDesc2.Text("")
+			Gui.fmGaugeIssue.txtDesc3.Text("")
+			Gui.fmGaugeIssue.txtCalDt.Text("")
+			Gui.fmGaugeIssue.txtCalDue.Text("")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Case(CHKOUTGAUGE)
+		F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!chkOutGauge.Value,=,1)
+			Gui.fmGaugeIssue.chkKBGauge.Value(0)
+			Gui.fmGaugeIssue.chkOutGauge.Value(1)
+			Gui.fmGaugeIssue.lblGaSN.Caption("Outside Gauge SN")
+			Gui.fmGaugeIssue.ddlKBGauge.Visible(False)
+			Gui.fmGaugeIssue.txtGaSN.Visible(True)
+			'Gui.fmGaugeIssue.txtGaSN.SetFocus(True)
+			Gui.fmGaugeIssue.cmdGaSNBrw.Enabled(False)
+			Gui.fmGaugeIssue.txtGaSN.Enabled(True)
+			Gui.fmGaugeIssue.txtDesc1.Enabled(True)
+			Gui.fmGaugeIssue.txtCalDt.Enabled(True)
+			Gui.fmGaugeIssue.txtCalDue.Enabled(True)
+			Gui.fmGaugeIssue.txtCalDt.Visible(False)
+			Gui.fmGaugeIssue.txtCalDue.Visible(False)
+			Gui.fmGaugeIssue.dtpOutCaldt.Visible(True)
+			Gui.fmGaugeIssue.dtpOutCalDuedt.Visible(True)
+			Gui.fmGaugeIssue.ddlKBGauge.Text("")
+			Gui.fmGaugeIssue.txtGaSN.Text("")
+			Gui.fmGaugeIssue.txtDesc1.Text("")
+			Gui.fmGaugeIssue.txtDesc2.Text("")
+			Gui.fmGaugeIssue.txtDesc3.Text("")
+			Gui.fmGaugeIssue.txtCalDt.Text("")
+			Gui.fmGaugeIssue.txtCalDue.Text("")
+		F.Intrinsic.Control.Else
+			Gui.fmGaugeIssue.chkKBGauge.Value(1)
+			Gui.fmGaugeIssue.chkOutGauge.Value(0)
+			Gui.fmGaugeIssue.lblGaSN.Caption("K&&B Gauge SN")
+			Gui.fmGaugeIssue.ddlKBGauge.Visible(True)
+			'Gui.fmGaugeIssue.ddlKBGauge.SetFocus(True)
+			Gui.fmGaugeIssue.txtGaSN.Visible(False)
+			Gui.fmGaugeIssue.cmdGaSNBrw.Enabled(True)
+			Gui.fmGaugeIssue.txtGaSN.Enabled(False)
+			Gui.fmGaugeIssue.txtDesc1.Enabled(False)
+			Gui.fmGaugeIssue.txtCalDt.Enabled(False)
+			Gui.fmGaugeIssue.txtCalDue.Enabled(False)
+			Gui.fmGaugeIssue.txtCalDt.Visible(True)
+			Gui.fmGaugeIssue.txtCalDue.Visible(True)
+			Gui.fmGaugeIssue.dtpOutCaldt.Visible(False)
+			Gui.fmGaugeIssue.dtpOutCalDuedt.Visible(False)
+			Gui.fmGaugeIssue.ddlKBGauge.Text("")
+			Gui.fmGaugeIssue.txtGaSN.Text("")
+			Gui.fmGaugeIssue.txtDesc1.Text("")
+			Gui.fmGaugeIssue.txtDesc2.Text("")
+			Gui.fmGaugeIssue.txtDesc3.Text("")
+			Gui.fmGaugeIssue.txtCalDt.Text("")
+			Gui.fmGaugeIssue.txtCalDue.Text("")
+		F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!chkKBGauge.Value,=,1)
+	Gui.fmGaugeIssue.ddlKBGauge.SetFocus(True)
+F.Intrinsic.Control.Else
+	Gui.fmGaugeIssue.txtGaSN.SetFocus(True)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.UnBlockEvents
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.ChkChng.End
+
+Program.Sub.RepChkChng.Start
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.BlockEvents
+F.Intrinsic.Control.SelectCase(V.Args.ControlName)
+	F.Intrinsic.Control.Case(CHKGATOWO)
+		F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!chkGaToWo.Value,=,1)
+			Gui.fmGaugeIssue.lblRepWOSuffSeq.Visible(True)
+			Gui.fmGaugeIssue.cmdRepWOBrw.Visible(True)
+			Gui.fmGaugeIssue.txtRepWOSuffSeq.Visible(True)
+			Gui.fmGaugeIssue.lblRepGaSN.Visible(False)
+			Gui.fmGaugeIssue.txtRepGaSN.Visible(False)
+			Gui.fmGaugeIssue.chkRepRemDt.Visible(False)
+			Gui.fmGaugeIssue.cmdGaSNBrw2.Visible(False)
+			Gui.fmGaugeIssue.lblRepStrt.Visible(True)
+			Gui.fmGaugeIssue.dtpRepStrt.Visible(True)
+			Gui.fmGaugeIssue.lblRepEnd.Visible(True)
+			Gui.fmGaugeIssue.dtpRepEnd.Visible(True)
+			Gui.fmGaugeIssue.chkWOToGa.Value(0)
+			Gui.fmGaugeIssue.chkInspToGa.Value(0)
+			Gui.fmGaugeIssue.chkRepRemDt.Value(0)
+			Gui.fmGaugeIssue.cmdPrint.Visible(True)
+		F.Intrinsic.Control.Else
+			Gui.fmGaugeIssue.lblRepWOSuffSeq.Visible(False)
+			Gui.fmGaugeIssue.cmdRepWOBrw.Visible(False)
+			Gui.fmGaugeIssue.txtRepWOSuffSeq.Visible(False)
+			Gui.fmGaugeIssue.lblRepGaSN.Visible(False)
+			Gui.fmGaugeIssue.txtRepGaSN.Visible(False)
+			Gui.fmGaugeIssue.chkRepRemDt.Visible(False)
+			Gui.fmGaugeIssue.cmdGaSNBrw2.Visible(False)
+			Gui.fmGaugeIssue.lblRepStrt.Visible(False)
+			Gui.fmGaugeIssue.dtpRepStrt.Visible(False)
+			Gui.fmGaugeIssue.lblRepEnd.Visible(False)
+			Gui.fmGaugeIssue.dtpRepEnd.Visible(False)
+			Gui.fmGaugeIssue.chkWOToGa.Value(0)
+			Gui.fmGaugeIssue.chkInspToGa.Value(0)
+			Gui.fmGaugeIssue.txtRepWOSuffSeq.Text("")
+			Gui.fmGaugeIssue.txtRepGaSN.Text("")
+			Gui.fmGaugeIssue.chkRepRemDt.Value(0)
+			Gui.fmGaugeIssue.cmdPrint.Visible(False)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Case(CHKWOTOGA)
+		F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!chkWOToGa.Value,=,1)
+			Gui.fmGaugeIssue.lblRepWOSuffSeq.Visible(False)
+			Gui.fmGaugeIssue.cmdRepWOBrw.Visible(False)
+			Gui.fmGaugeIssue.txtRepWOSuffSeq.Visible(False)
+			Gui.fmGaugeIssue.lblRepGaSN.Visible(True)
+			Gui.fmGaugeIssue.txtRepGaSN.Visible(True)
+			Gui.fmGaugeIssue.cmdGaSNBrw2.Visible(True)
+			Gui.fmGaugeIssue.chkRepRemDt.Visible(False)
+			Gui.fmGaugeIssue.lblRepStrt.Visible(True)
+			Gui.fmGaugeIssue.dtpRepStrt.Visible(True)
+			Gui.fmGaugeIssue.lblRepEnd.Visible(True)
+			Gui.fmGaugeIssue.dtpRepEnd.Visible(True)
+			Gui.fmGaugeIssue.chkGaToWo.Value(0)
+			Gui.fmGaugeIssue.chkInspToGa.Value(0)
+			Gui.fmGaugeIssue.txtRepWOSuffSeq.Text("")
+			Gui.fmGaugeIssue.txtRepGaSN.Text("")
+			Gui.fmGaugeIssue.chkRepRemDt.Value(0)
+			Gui.fmGaugeIssue.cmdPrint.Visible(True)
+		F.Intrinsic.Control.Else
+			Gui.fmGaugeIssue.lblRepWOSuffSeq.Visible(False)
+			Gui.fmGaugeIssue.cmdRepWOBrw.Visible(False)
+			Gui.fmGaugeIssue.txtRepWOSuffSeq.Visible(False)
+			Gui.fmGaugeIssue.lblRepGaSN.Visible(False)
+			Gui.fmGaugeIssue.txtRepGaSN.Visible(False)
+			Gui.fmGaugeIssue.cmdGaSNBrw2.Visible(False)
+			Gui.fmGaugeIssue.chkRepRemDt.Visible(False)
+			Gui.fmGaugeIssue.lblRepStrt.Visible(False)
+			Gui.fmGaugeIssue.dtpRepStrt.Visible(False)
+			Gui.fmGaugeIssue.lblRepEnd.Visible(False)
+			Gui.fmGaugeIssue.dtpRepEnd.Visible(False)
+			Gui.fmGaugeIssue.chkGaToWo.Value(0)
+			Gui.fmGaugeIssue.chkInspToGa.Value(0)
+			Gui.fmGaugeIssue.txtRepWOSuffSeq.Text("")
+			Gui.fmGaugeIssue.txtRepGaSN.Text("")
+			Gui.fmGaugeIssue.chkRepRemDt.Value(0)
+			Gui.fmGaugeIssue.cmdPrint.Visible(False)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Case(CHKINSPTOGA)
+		F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!chkInspToGa.Value,=,1)
+			Gui.fmGaugeIssue.lblRepWOSuffSeq.Visible(False)
+			Gui.fmGaugeIssue.cmdRepWOBrw.Visible(False)
+			Gui.fmGaugeIssue.txtRepWOSuffSeq.Visible(False)
+			Gui.fmGaugeIssue.lblRepGaSN.Visible(True)
+			Gui.fmGaugeIssue.txtRepGaSN.Visible(True)
+			Gui.fmGaugeIssue.chkRepRemDt.Visible(True)
+			Gui.fmGaugeIssue.cmdGaSNBrw2.Visible(True)
+			Gui.fmGaugeIssue.lblRepStrt.Visible(True)
+			Gui.fmGaugeIssue.dtpRepStrt.Visible(True)
+			Gui.fmGaugeIssue.lblRepEnd.Visible(True)
+			Gui.fmGaugeIssue.dtpRepEnd.Visible(True)
+			Gui.fmGaugeIssue.chkGaToWo.Value(0)
+			Gui.fmGaugeIssue.chkWOToGa.Value(0)
+			Gui.fmGaugeIssue.txtRepWOSuffSeq.Text("")
+			Gui.fmGaugeIssue.txtRepGaSN.Text("")
+			Gui.fmGaugeIssue.chkRepRemDt.Value(0)
+			Gui.fmGaugeIssue.cmdPrint.Visible(True)
+		F.Intrinsic.Control.Else
+			Gui.fmGaugeIssue.lblRepWOSuffSeq.Visible(False)
+			Gui.fmGaugeIssue.cmdRepWOBrw.Visible(False)
+			Gui.fmGaugeIssue.txtRepWOSuffSeq.Visible(False)
+			Gui.fmGaugeIssue.lblRepGaSN.Visible(False)
+			Gui.fmGaugeIssue.txtRepGaSN.Visible(False)
+			Gui.fmGaugeIssue.cmdGaSNBrw2.Visible(False)
+			Gui.fmGaugeIssue.chkRepRemDt.Visible(False)
+			Gui.fmGaugeIssue.lblRepStrt.Visible(False)
+			Gui.fmGaugeIssue.dtpRepStrt.Visible(False)
+			Gui.fmGaugeIssue.lblRepEnd.Visible(False)
+			Gui.fmGaugeIssue.dtpRepEnd.Visible(False)
+			Gui.fmGaugeIssue.chkGaToWo.Value(0)
+			Gui.fmGaugeIssue.chkWOToGa.Value(0)
+			Gui.fmGaugeIssue.txtRepWOSuffSeq.Text("")
+			Gui.fmGaugeIssue.txtRepGaSN.Text("")
+			Gui.fmGaugeIssue.chkRepRemDt.Value(0)
+			Gui.fmGaugeIssue.cmdPrint.Visible(False)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Case(CHKREPREMDT)
+		F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!chkRepRemDt.Value,=,1)
+			Gui.fmGaugeIssue.lblRepStrt.Visible(False)
+			Gui.fmGaugeIssue.dtpRepStrt.Visible(False)
+			Gui.fmGaugeIssue.lblRepEnd.Visible(False)
+			Gui.fmGaugeIssue.dtpRepEnd.Visible(False)
+		F.Intrinsic.Control.Else
+			Gui.fmGaugeIssue.lblRepStrt.Visible(True)
+			Gui.fmGaugeIssue.dtpRepStrt.Visible(True)
+			Gui.fmGaugeIssue.lblRepEnd.Visible(True)
+			Gui.fmGaugeIssue.dtpRepEnd.Visible(True)
+		F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.UnBlockEvents
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.RepChkChng.End
+
+Program.Sub.cmdWOBrw_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sRet.Declare
+
+F.Intrinsic.Control.CallSub(ODBC,"State","OPEN")
+F.Intrinsic.UI.Browser("Select WO and Sequence","conts","Select JOB,SUFFIX,SEQ,PART as WORKCENTER,DESCRIPTION from V_JOB_OPERATIONS where LMO = 'L' and  FLAG_CLOSED <> 'Y' order by JOB,SUFFIX,SEQ","JOB*!*SUFFIX*!*SEQ*!*WORKCENTER*!*DESCRIPTION","750*!*500*!*500*!*750*!*3000",10000,10000,V.Local.sRet)
+F.Intrinsic.Control.CallSub(ODBC,"State","CLOSE")
+
+F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+
+Gui.fmGaugeIssue.txtWO.Text(V.Local.sRet(0).Trim)
+Gui.fmGaugeIssue.txtWOSuff.Text(V.Local.sRet(1).Trim)
+Gui.fmGaugeIssue.txtWOSeq.Text(V.Local.sRet(2).Trim)
+
+V.Local.sRet.Redim(0,0)
+
+F.Intrinsic.Control.CallSub(txtWOSeq_LostFocus)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdWOBrw_Click.End
+
+Program.Sub.txtWO_KeyPressEnter.Start
+F.Intrinsic.Control.Try
+V.Local.sScanned.Declare
+V.Local.bScanChk.Declare
+V.Local.sWO.Declare
+V.Local.sWO_Suff.Declare
+V.Local.sWO_Seq.Declare
+
+V.Local.sScanned.Set(V.Screen.fmGaugeIssue!txtWO.Text)
+
+F.Intrinsic.String.IsInString(V.Local.sScanned,"$%",True,V.Local.bScanChk)
+
+F.Intrinsic.Control.If(V.Local.bScanChk,=,True)
+	F.Intrinsic.String.Replace(V.Local.sScanned,"$%","",V.Local.sScanned)
+	F.Intrinsic.String.Left(V.Local.sScanned,6,V.Local.sWO)
+	F.Intrinsic.String.Mid(V.Local.sScanned,7,3,V.Local.sWO_Suff)
+	F.Intrinsic.String.Right(V.Local.sScanned,6,V.Local.sWO_Seq)
+	
+	Gui.fmGaugeIssue.txtWO.Text(V.Local.sWO)
+	Gui.fmGaugeIssue.txtWOSuff.Text(V.Local.sWO_Suff)
+	Gui.fmGaugeIssue.txtWOSeq.Text(V.Local.sWO_Seq)
+	F.Intrinsic.Control.CallSub(txtWOSeq_LostFocus)
+	Gui.fmGaugeIssue.cmdWOBrw.SetFocus(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.txtWO_KeyPressEnter.End
+
+Program.Sub.txtWOSeq_LostFocus.Start
+F.Intrinsic.Control.Try
+V.Local.sSQL.Declare
+V.Local.sWO.Declare
+V.Local.sWOSuff.Declare
+V.Local.sSeq.Declare
+V.Local.sTime.Declare
+
+F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!txtWOSeq.Text.Trim,=,"")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!txtWO.Text.Trim,=,"")
+	Gui.fmGaugeIssue.txtWOSuff.Text("")
+	Gui.fmGaugeIssue.txtWOSeq.Text("")
+	Gui.fmGaugeIssue.txtTime.Text("")
+	Gui.fmGaugeIssue.frameGaOrig.Enabled(False)
+	Gui.fmGaugeIssue.frameGauge.Enabled(False)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+V.Local.sWO.Set(V.Screen.fmGaugeIssue!txtWO.Text.Trim)
+V.Local.sWOSuff.Set(V.Screen.fmGaugeIssue!txtWOSuff.Text.Trim)
+V.Local.sSeq.Set(V.Screen.fmGaugeIssue!txtWOSeq.Text.Trim)
+
+F.Intrinsic.Control.CallSub(ODBC,"State","OPEN")
+	F.Intrinsic.String.Build("Select * from V_JOB_OPERATIONS where JOB = '{0}' and SUFFIX = '{1}' and SEQ = '{2}' and FLAG_CLOSED <> 'Y'",V.Local.sWO,V.Local.sWOSuff,V.Local.sSeq,V.Local.sSQL)
+	F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+	
+	F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+		F.Intrinsic.UI.Msgbox("Sequence is closed or does not exist","Error!")
+		F.Intrinsic.Control.CallSub(ODBC,"State","CLOSE")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.String.Format(V.Ambient.Now,"Hh:Nn:Ss AMPM",V.Local.sTime)
+	
+	Gui.fmGaugeIssue.txtTime.Text(V.Local.sTime)
+	
+F.Intrinsic.Control.CallSub(ODBC,"State","CLOSE")
+
+Gui.fmGaugeIssue.frameGaOrig.Enabled(True)
+Gui.fmGaugeIssue.frameGauge.Enabled(True)
+
+F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!chkKBGauge.Value,=,1)
+	Gui.fmGaugeIssue.ddlKBGauge.SetFocus(True)
+F.Intrinsic.Control.Else
+	Gui.fmGaugeIssue.txtGaSN.SetFocus(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.txtWOSeq_LostFocus.End
+
+Program.Sub.txtWOSeq_Change.Start
+F.Intrinsic.Control.Try
+
+F.Data.DataTable.DeleteRow("dtMainCurr",-1)
+F.Data.DataTable.DeleteRow("dtMainHist",-1)
+
+F.Data.DataTable.AcceptChanges("dtMainCurr")
+F.Data.DataTable.AcceptChanges("dtMainHist")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.txtWOSeq_Change.End
+
+Program.Sub.dtpToday_Change.Start
+F.Intrinsic.Control.Try
+V.Local.sTime.Declare
+
+F.Intrinsic.String.Format(V.Ambient.Now,"HH:MM:SS AMPM",V.Local.sTime)
+
+F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!dtpToday.Value,<>,V.Ambient.Date)
+	Gui.fmGaugeIssue.txtTime.Text("12:00:00 AM")
+F.Intrinsic.Control.Else
+	Gui.fmGaugeIssue.txtTime.Text(V.Local.sTime)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.dtpToday_Change.End
+
+Program.Sub.cmdGaSNBrw_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sRet.Declare
+V.Local.sSQL.Declare
+V.Local.sCalDt.Declare
+V.Local.sCalDue.Declare
+
+F.Intrinsic.Control.If(V.Args.CONTROLNAME,=,"CMDGASNBRW")
+	F.Intrinsic.Control.CallSub(ODBC,"State","OPEN")
+	F.Intrinsic.String.Build("Select ControlNum as 'Gauge SN',CalDate as 'Cal Date',NextCalDate as 'Cal Due',RTRIM(Description)+' '+RTRIM(TDescription) as 'Gauge Description' from GCG_6437_GAUGE_INFO where NextCalDate > '{0}' ",V.Ambient.Date.PervasiveDate,V.Local.sSQL)
+	F.Intrinsic.UI.Browser("Select Gauge","conts",V.Local.sSQL,"Gauge SN*!*Cal Date*!*Cal Due*!*Gauge Description","1000*!*750*!*750*!*3000",10000,10000,V.Local.sRet)
+	F.Intrinsic.Control.CallSub(ODBC,"State","CLOSE")
+	
+	F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"***CANCEL***")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	
+	F.Intrinsic.String.Format(V.Local.sRet(1),"M/DD/YYYY",V.Local.sCalDt)
+	F.Intrinsic.String.Format(V.Local.sRet(2),"M/DD/YYYY",V.Local.sCalDue)
+	
+	Gui.fmGaugeIssue.ddlKBGauge.Text(V.Local.sRet(0).Trim)
+	Gui.fmGaugeIssue.txtCalDt.Text(V.Local.sCalDt)
+	Gui.fmGaugeIssue.txtCalDue.Text(V.Local.sCalDue)
+	Gui.fmGaugeIssue.txtDesc1.Text(V.Local.sRet(3).Trim)	
+F.Intrinsic.Control.ELse
+	F.Intrinsic.Control.CallSub(ODBC,"State","OPEN")
+	F.Intrinsic.String.Build("Select distinct Gauge_SN as 'Gauge SN',RTRIM(Desc_1) as 'Description' from GCG_6437_GAUGE_TRACK",,V.Local.sSQL)
+	F.Intrinsic.UI.Browser("Select Gauge","conts",V.Local.sSQL,"Gauge SN*!*Gauge Description","1000*!*3000",10000,10000,V.Local.sRet)
+	F.Intrinsic.Control.CallSub(ODBC,"State","CLOSE")
+	
+	F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"***CANCEL***")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+
+	Gui.fmGaugeIssue.txtRepGaSN.Text(V.Local.sRet(0).Trim)	
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdGaSNBrw_Click.End
+
+Program.Sub.ddlKBGauge_Change.Start
+F.Intrinsic.Control.Try
+V.Local.sGaSN.Declare
+V.Local.sSQL.Declare
+
+V.Local.sGaSN.Set(V.Screen.fmGaugeIssue!ddlKBGauge.Value.Trim)
+
+F.Intrinsic.Control.If(V.Local.sGaSN.Trim,=,"")
+	Gui.fmGaugeIssue.txtCalDt.Text("")
+	Gui.fmGaugeIssue.txtCalDue.Text("")
+	Gui.fmGaugeIssue.txtDesc1.Text("")
+	Gui.fmGaugeIssue.txtDesc2.Text("")
+	Gui.fmGaugeIssue.txtDesc3.Text("")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("Select CalDate,NextCalDate,RTRIM(Description)+' '+RTRIM(TDescription) as Description from GCG_6437_GAUGE_INFO where RTRIM(ControlNum) = '{0}'",V.Local.sGaSN,V.Local.sSQL)
+
+F.Intrinsic.Control.CallSub(ODBC,"State","OPEN")
+F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+F.Intrinsic.Control.CallSub(ODBC,"State","CLOSE")
+
+F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+	F.Intrinsic.UI.Msgbox("This gauge is not on file","Error!")
+	Gui.fmGaugeIssue.ddlKBGauge.Text("")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Split(V.Local.sSQL,"*!*",V.Local.sSQL)
+
+Gui.fmGaugeIssue.txtCalDt.Text(V.Local.sSQL(0))
+Gui.fmGaugeIssue.txtCalDue.Text(V.Local.sSQL(1))
+Gui.fmGaugeIssue.txtDesc1.Text(V.Local.sSQL(2))
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.ddlKBGauge_Change.End
+
+Program.Sub.txtGaSN_KeyPressEnter.Start
+F.Intrinsic.Control.Try
+V.Local.sOutGauge.Declare
+
+F.Intrinsic.String.Replace(V.Screen.fmGaugeIssue!txtGaSN.Text,"*","",V.Local.sOutGauge)
+
+Gui.fmGaugeIssue.txtGaSN.Text(V.Local.sOutGauge)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.txtGaSN_KeyPressEnter.End
+
+Program.Sub.txtGaSN_LostFocus.Start
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.BlockEvents
+F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!txtGaSN.Text.Trim,=,"")
+	Gui.fmGaugeIssue.txtGaSN.SetFocus(True)
+F.Intrinsic.Control.Else
+	Gui.fmGaugeIssue.txtDesc1.SetFocus(True)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.UnBlockEvents
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.txtGaSN_LostFocus.End
+
+Program.Sub.GsGcGI_Hist_RowCellClick.Start
+F.Intrinsic.Control.Try
+V.Local.sCalDue.Declare
+V.Local.sYY.Declare
+V.Local.sMM.Declare
+V.Local.sDD.Declare
+V.Local.sIssDate.Declare
+
+V.Local.sIssDate.Set(V.Screen.fmGaugeIssue!dtpToday.Value)
+
+F.Intrinsic.String.Format(V.Screen.fmGaugeIssue!dtpToday.Value,"YYYYMMDD",V.Local.sIssDate)
+
+F.Intrinsic.Control.SelectCase(V.Args.Column)
+	F.Intrinsic.Control.Case("Sel")
+		Gui.fmGaugeIssue.GsGcGI_Hist.GetCellValueByColumnName("gvMainHist","Cal_Due",V.Args.RowIndex,V.Local.sCalDue)
+		F.Intrinsic.Control.If(V.Local.sCalDue,<=,V.Local.sIssDate)
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Args.CellValue,=,False)
+			F.Data.DataTable.SetValue("dtMainHist",V.Args.RowIndex,"Sel",True)
+		F.Intrinsic.Control.Else
+			F.Data.DataTable.SetValue("dtMainHist",V.Args.RowIndex,"Sel",False)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.CaseElse
+		F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.GsGcGI_Hist_RowCellClick.End
+
+Program.Sub.GsGcGI_New_RowCellClick.Start
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.SelectCase(V.Args.Column)
+	F.Intrinsic.Control.Case("Sel")
+		F.Intrinsic.Control.If(V.Args.CellValue,=,False)
+			F.Data.DataTable.SetValue("dtMainCurr",V.Args.RowIndex,"Sel",True)
+		F.Intrinsic.Control.Else
+			F.Data.DataTable.SetValue("dtMainCurr",V.Args.RowIndex,"Sel",False)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.CaseElse
+		F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.GsGcGI_New_RowCellClick.End
+
+Program.Sub.cmdRem_Click.Start
+F.Intrinsic.Control.Try
+V.Local.iCnt.Declare
+
+F.Data.DataView.Create("dtMainCurr","dvSel",22,"Sel = True","")
+
+F.Intrinsic.Control.If(V.DataView.dtMainCurr!dvSel.RowCount,=,0)
+	F.Intrinsic.UI.Msgbox("Please select at least one line to remove","Error!")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.For(V.Local.iCnt,V.DataView.dtMainCurr!dvSel.RowCount--,0,-1)
+	F.Data.DataView.DeleteRow("dtMainCurr","dvSel",V.Local.iCnt)
+F.Intrinsic.Control.Next(V.Local.iCnt)
+
+F.Data.DataTable.AcceptChanges("dtMainCurr")
+
+F.Data.DataView.Close("dtMainCurr","dvSel")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdRem_Click.End
+
+Program.Sub.cmdEdit_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sYY.Declare
+V.Local.sMM.Declare
+V.Local.sDD.Declare
+V.Local.sCalDate.Declare
+V.Local.sCalDue.Declare
+
+F.Data.DataView.Create("dtMainCurr","dvSel",22,"Sel = True","")
+
+F.Intrinsic.Control.If(V.DataView.dtMainCurr!dvSel.RowCount,=,0)
+	F.Intrinsic.UI.Msgbox("No records selected","Error!")
+	F.Data.DataView.Close("dtMainCurr","dvSel")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.ElseIf(V.DataView.dtMainCurr!dvSel.RowCount,>,1)
+	F.Intrinsic.UI.Msgbox("Please select only one line at a time to edit","Note")
+	F.Data.DataView.Close("dtMainCurr","dvSel")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataView.dtMainCurr!dvSel(0).Gauge_Owner!FieldValTrim,=,"K&B")
+	Gui.fmGaugeIssue.chkKBGauge.Value(1)
+	F.Intrinsic.String.Left(V.DataView.dtMainCurr!dvSel(0).Cal_Date!FieldValTrim,4,V.Local.sYY)
+	F.Intrinsic.String.Mid(V.DataView.dtMainCurr!dvSel(0).Cal_Date!FieldValTrim,5,2,V.Local.sMM)
+	F.Intrinsic.String.Right(V.DataView.dtMainCurr!dvSel(0).Cal_Date!FieldValTrim,2,V.Local.sDD)
+	F.Intrinsic.String.Build("{0}/{1}/{2}",V.Local.sMM,V.Local.sDD,V.Local.sYY,V.Local.sCalDate)
+	
+	F.Intrinsic.String.Left(V.DataView.dtMainCurr!dvSel(0).Cal_Due!FieldValTrim,4,V.Local.sYY)
+	F.Intrinsic.String.Mid(V.DataView.dtMainCurr!dvSel(0).Cal_Due!FieldValTrim,5,2,V.Local.sMM)
+	F.Intrinsic.String.Right(V.DataView.dtMainCurr!dvSel(0).Cal_Due!FieldValTrim,2,V.Local.sDD)
+	F.Intrinsic.String.Build("{0}/{1}/{2}",V.Local.sMM,V.Local.sDD,V.Local.sYY,V.Local.sCalDue)
+
+	F.Intrinsic.Control.BlockEvents
+	Gui.fmGaugeIssue.ddlKBGauge.Text(V.DataView.dtMainCurr!dvSel(0).Gauge_SN!FieldValTrim)
+	Gui.fmGaugeIssue.txtDesc1.Text(V.DataView.dtMainCurr!dvSel(0).Desc_1!FieldValTrim)
+	Gui.fmGaugeIssue.txtDesc2.Text(V.DataView.dtMainCurr!dvSel(0).Desc_2!FieldValTrim)
+	Gui.fmGaugeIssue.txtDesc3.Text(V.DataView.dtMainCurr!dvSel(0).Desc_3!FieldValTrim)
+	Gui.fmGaugeIssue.txtCalDt.Text(V.Local.sCalDate)
+	Gui.fmGaugeIssue.txtCalDue.Text(V.Local.sCalDue)
+	F.Intrinsic.Control.UnBlockEvents
+F.Intrinsic.Control.Else
+	Gui.fmGaugeIssue.chkOutGauge.Value(1)
+	F.Intrinsic.String.Left(V.DataView.dtMainCurr!dvSel(0).Cal_Date!FieldValTrim,4,V.Local.sYY)
+	F.Intrinsic.String.Mid(V.DataView.dtMainCurr!dvSel(0).Cal_Date!FieldValTrim,5,2,V.Local.sMM)
+	F.Intrinsic.String.Right(V.DataView.dtMainCurr!dvSel(0).Cal_Date!FieldValTrim,2,V.Local.sDD)
+	F.Intrinsic.String.Build("{0}/{1}/{2}",V.Local.sMM,V.Local.sDD,V.Local.sYY,V.Local.sCalDate)
+	
+	F.Intrinsic.String.Left(V.DataView.dtMainCurr!dvSel(0).Cal_Due!FieldValTrim,4,V.Local.sYY)
+	F.Intrinsic.String.Mid(V.DataView.dtMainCurr!dvSel(0).Cal_Due!FieldValTrim,5,2,V.Local.sMM)
+	F.Intrinsic.String.Right(V.DataView.dtMainCurr!dvSel(0).Cal_Due!FieldValTrim,2,V.Local.sDD)
+	F.Intrinsic.String.Build("{0}/{1}/{2}",V.Local.sMM,V.Local.sDD,V.Local.sYY,V.Local.sCalDue)
+	F.Intrinsic.Control.BlockEvents
+	Gui.fmGaugeIssue.txtGaSN.Text(V.DataView.dtMainCurr!dvSel(0).Gauge_SN!FieldValTrim)
+	Gui.fmGaugeIssue.txtDesc1.Text(V.DataView.dtMainCurr!dvSel(0).Desc_1!FieldValTrim)
+	Gui.fmGaugeIssue.txtDesc2.Text(V.DataView.dtMainCurr!dvSel(0).Desc_2!FieldValTrim)
+	Gui.fmGaugeIssue.txtDesc3.Text(V.DataView.dtMainCurr!dvSel(0).Desc_3!FieldValTrim)
+	Gui.fmGaugeIssue.txtCalDt.Text(V.Local.sCalDate)
+	Gui.fmGaugeIssue.txtCalDue.Text(V.Local.sCalDue)
+F.Intrinsic.Control.UnBlockEvents
+F.Intrinsic.Control.EndIf
+
+F.Data.DataView.DeleteRow("dtMainCurr","dvSel",0)
+F.Data.DataTable.AcceptChanges("dtMainCurr")
+F.Data.DataView.Close("dtMainCurr","dvSel")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdEdit_Click.End
+
+Program.Sub.cmdAdd_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sDate.Declare
+V.Local.sTime.Declare
+V.Local.sOwner.Declare
+V.Local.sCalDt.Declare
+V.Local.sCalDue.Declare
+V.Local.sFilter.Declare
+V.Local.sSQL.Declare
+V.Local.sMsg.Declare
+
+F.Intrinsic.String.Format(V.Screen.fmGaugeIssue!dtpToday.Value,"YYYYMMDD",V.Local.sDate)
+F.Intrinsic.String.Format(V.Screen.fmGaugeIssue!txtTime.Text,"HHNNSS00",V.Local.sTime)
+
+F.Intrinsic.Control.If(V.DataView.dtMainCurr!dvSNChk.Exists)
+	F.Data.DataView.Close("dtMainCurr","dvSNChk")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!ddlKBGauge.Value.Trim,=,"","AND",V.Screen.fmGaugeIssue!txtGaSN.Text.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Please include a gauge serial number to add","Error!")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!chkKBGauge.Value,=,1)
+	V.Local.sOwner.Set("K&B")
+	F.Intrinsic.String.Build("Gauge_SN = '{0}'",V.Screen.fmGaugeIssue!ddlKBGauge.Text.Trim,V.Local.sFilter)
+	F.Data.DataView.Create("dtMainCurr","dvSNChk",22,V.Local.sFilter,"")
+	
+	F.Intrinsic.Control.If(V.DataView.dtMainCurr!dvSNChk.RowCount,<>,0)
+		F.Intrinsic.UI.Msgbox("This gauge has already been added to the list","Error!")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Format(V.Screen.fmGaugeIssue!txtCalDt.Text,"YYYYMMDD",V.Local.sCalDt)
+	F.Intrinsic.String.Format(V.Screen.fmGaugeIssue!txtCalDue.Text,"YYYYMMDD",V.Local.sCalDue)
+	F.Data.DataTable.AddRow("dtMainCurr","Sel",False,"Gauge_SN",V.Screen.fmGaugeIssue!ddlKBGauge.Text.Trim,"Desc_1",V.Screen.fmGaugeIssue!txtDesc1.Text.Trim,"Desc_2",V.Screen.fmGaugeIssue!txtDesc2.Text.Trim,"Desc_3",V.Screen.fmGaugeIssue!txtDesc3.Text.Trim,"WO",V.Screen.fmGaugeIssue!txtWO.Text.Trim,"WO_Suff",V.Screen.fmGaugeIssue!txtWOSuff.Text.Trim,"WO_Seq",V.Screen.fmGaugeIssue!txtWOSeq.Text.Trim,"Cal_Date",V.Local.sCalDt,"Cal_Due",V.Local.sCalDue,"Iss_Date",V.Local.sDate,"Iss_Time",V.Local.sTime,"Iss_By",V.Caller.User,"Gauge_Owner",V.Local.sOwner)	
+F.Intrinsic.Control.Else
+	V.Local.sOwner.Set("Outside")
+	F.Intrinsic.String.Format(V.Screen.fmGaugeIssue!dtpOutCaldt.Value,"YYYYMMDD",V.Local.sCalDt)
+	F.Intrinsic.String.Format(V.Screen.fmGaugeIssue!dtpOutCalDuedt.Value,"YYYYMMDD",V.Local.sCalDue)
+	
+	F.Data.DataTable.AddRow("dtMainCurr","Sel",False,"Gauge_SN",V.Screen.fmGaugeIssue!txtGaSN.Text.Trim,"Desc_1",V.Screen.fmGaugeIssue!txtDesc1.Text.Trim,"Desc_2",V.Screen.fmGaugeIssue!txtDesc2.Text.Trim,"Desc_3",V.Screen.fmGaugeIssue!txtDesc3.Text.Trim,"WO",V.Screen.fmGaugeIssue!txtWO.Text.Trim,"WO_Suff",V.Screen.fmGaugeIssue!txtWOSuff.Text.Trim,"WO_Seq",V.Screen.fmGaugeIssue!txtWOSeq.Text.Trim,"Cal_Date",V.Local.sCalDt,"Cal_Due",V.Local.sCalDue,"Iss_Date",V.Local.sDate,"Iss_Time",V.Local.sTime,"Iss_By",V.Caller.User,"Gauge_Owner",V.Local.sOwner)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.BlockEvents
+Gui.fmGaugeIssue.ddlKBGauge.ListIndex(0)
+Gui.fmGaugeIssue.txtGaSN.Text("")
+Gui.fmGaugeIssue.txtDesc1.Text("")
+Gui.fmGaugeIssue.txtDesc2.Text("")
+Gui.fmGaugeIssue.txtDesc3.Text("")
+Gui.fmGaugeIssue.txtCalDt.Text("")
+Gui.fmGaugeIssue.txtCalDue.Text("")
+F.Intrinsic.Control.UnBlockEvents
+
+F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!chkKBGauge.Value,=,1)
+	Gui.fmGaugeIssue.ddlKBGauge.SetFocus(True)
+F.Intrinsic.Control.Else
+	Gui.fmGaugeIssue.txtGaSN.SetFocus(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdAdd_Click.End
+
+Program.Sub.cmdAddHist_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sFilter.Declare
+V.Local.iCnt.Declare
+V.Local.sDate.Declare
+V.Local.sTime.Declare
+
+F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!txtWO.Text.Trim,=,"","OR",V.Screen.fmGaugeIssue!txtWOSeq.Text.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Please select a work order to add gauges to.","Error!")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Format(V.Screen.fmGaugeIssue!dtpToday.Value,"YYYYMMDD",V.Local.sDate)
+F.Intrinsic.String.Format(V.Screen.fmGaugeIssue!txtTime.Text,"HHNNSS00",V.Local.sTime)
+	
+F.Intrinsic.Control.If(V.DataTable.dtMainHist.RowCount,<>,0)
+	F.Data.DataView.Create("dtMainHist","dvHistSel2",22,"Sel = True","")
+	F.Intrinsic.Control.If(V.DataView.dtMainHist!dvHistSel2.RowCount,<>,0)
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataView.dtMainHist!dvHistSel2.RowCount--,1)
+			F.Intrinsic.String.Build("Gauge_SN = '{0}'",V.DataView.dtMainHist!dvHistSel2(V.Local.iCnt).Gauge_SN!FieldValTrim,V.Local.sFilter)
+			F.Data.DataView.Create("dtMainCurr","dvSNChk2",22,V.Local.sFilter,"")
+			F.Intrinsic.Control.If(V.DataView.dtMainCurr!dvSNChk2.RowCount,=,0)
+				F.Data.DataTable.AddRow("dtMainCurr","Sel",False,"Gauge_SN",V.DataView.dtMainHist!dvHistSel2(V.Local.iCnt).Gauge_SN!FieldValTrim,"Desc_1",V.DataView.dtMainHist!dvHistSel2(V.Local.iCnt).Desc_1!FieldValTrim,"Desc_2",V.DataView.dtMainHist!dvHistSel2(V.Local.iCnt).Desc_2!FieldValTrim,"Desc_3",V.DataView.dtMainHist!dvHistSel2(V.Local.iCnt).Desc_3!FieldValTrim,"WO",V.Screen.fmGaugeIssue!txtWO.Text.Trim,"WO_Suff",V.Screen.fmGaugeIssue!txtWOSuff.Text.Trim,"WO_Seq",V.Screen.fmGaugeIssue!txtWOSeq.Text.Trim,"Cal_Date",V.DataView.dtMainHist!dvHistSel2(V.Local.iCnt).Cal_Date!FieldValTrim,"Cal_Due",V.DataView.dtMainHist!dvHistSel2(V.Local.iCnt).Cal_Due!FieldValTrim,"Iss_Date",V.Local.sDate,"Iss_Time",V.Local.sTime,"Iss_By",V.Caller.User,"Gauge_Owner",V.DataView.dtMainHist!dvHistSel2(V.Local.iCnt).Gauge_Owner!FieldValTrim)
+				
+				F.Data.DataView.Close("dtMainCurr","dvSNChk2")
+			F.Intrinsic.Control.Else
+				F.Intrinsic.UI.Msgbox("This gauge has already been added to the list","Error!")
+				F.Data.DataView.Close("dtMainCurr","dvSNChk2")
+			F.Intrinsic.Control.EndIf			
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+		F.Data.DataTable.SetValue("dtMainHist",-1,"Sel",False)
+		Gui.fmGaugeIssue.cmdSelAll.Caption("Select All")
+		F.Data.DataView.Close("dtMainHist","dvHistSel2")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.Else
+		F.Data.DataView.Close("dtMainHist","dvHistSel2")
+	F.Intrinsic.Control.EndIf	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.Msgbox("No data selected","Error!")
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdAddHist_Click.End
+
+Program.Sub.cmdCommit_Click.Start
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.DataTable.dtMainCurr.RowCount,<>,0)
+	F.Intrinsic.Control.CallSub(ODBC,"State","OPEN")
+		F.Data.DataView.Create("dtMainCurr","dvCommit",22)
+		F.Data.DataView.ToDataTable("dtMainCurr","dvCommit","dtSaveToDb")
+		F.Data.DataView.Close("dtMainCurr","dvCommit")
+		F.Data.DataTable.RemoveColumn("dtSaveToDb","Sel")
+		F.Data.DataTable.SaveToDB("dtSaveToDb","conts","GCG_6437_GAUGE_TRACK","Gauge_SN*!*WO*!*WO_Suff*!*WO_Seq*!*Iss_Date",128)
+		F.Data.DataTable.Close("dtSaveToDb")
+	F.Intrinsic.Control.CallSub(ODBC,"State","CLOSE")
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Nothing to commit","Error!")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(ClearForm,"CONTROLNAME","CMDCOMMIT")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdCommit_Click.End
+
+Program.Sub.txtHistWOSeq_Change.Start
+F.Intrinsic.Control.Try
+
+F.Data.DataTable.DeleteRow("dtMainCurr",-1)
+F.Data.DataTable.DeleteRow("dtMainHist",-1)
+
+F.Data.DataTable.AcceptChanges("dtMainCurr")
+F.Data.DataTable.AcceptChanges("dtMainHist")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.txtHistWOSeq_Change.End
+
+Program.Sub.txtHistWOSeq_LostFocus.Start
+F.Intrinsic.Control.Try
+V.Local.sSQL.Declare
+V.Local.sWO.Declare
+V.Local.sWOSuff.Declare
+V.Local.sSeq.Declare
+V.Local.sDate.Declare
+V.Local.iCnt.Declare
+V.Local.sDateFormat.Declare
+
+F.Intrinsic.Control.If(V.DataTable.dtMainHist.RowCount,>,0)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!txtHistWOSeq.Text.Trim,=,"")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!txtHistWO.Text.Trim,=,"")
+	Gui.fmGaugeIssue.txtWOSuff.Text("")
+	Gui.fmGaugeIssue.txtWOSeq.Text("")
+	Gui.fmGaugeIssue.txtTime.Text("")
+	Gui.fmGaugeIssue.frameGaOrig.Enabled(False)
+	Gui.fmGaugeIssue.frameGauge.Enabled(False)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+V.Local.sWO.Set(V.Screen.fmGaugeIssue!txtHistWO.Text.Trim)
+V.Local.sWOSuff.Set(V.Screen.fmGaugeIssue!txtHistWOSuff.Text.Trim)
+V.Local.sSeq.Set(V.Screen.fmGaugeIssue!txtHistWOSeq.Text.Trim)
+
+F.Intrinsic.Control.CallSub(ODBC,"State","OPEN")
+	F.Intrinsic.String.Format(V.Screen.fmGaugeIssue!dtpHistWO.Value,"YYYYMMDD",V.Local.sDate)
+	
+	F.Intrinsic.String.Build("Select A.Gauge_SN,A.Desc_1,A.Desc_2,A.Desc_3,A.WO,A.WO_Suff,A.WO_Seq,Cast(B.CalDate as LongVarChar) as Cal_Date,Cast(B.NextCalDate as LongVarChar) as Cal_Due,A.Gauge_Owner from GCG_6437_GAUGE_TRACK A left join GCG_6437_GAUGE_INFO B on A.Gauge_SN = B.ControlNum where A.WO = '{0}' and A.WO_Suff = '{1}' and A.WO_Seq = '{2}' and A.Iss_Date = '{3}'",V.Local.sWO,V.Local.sWOSuff,V.Local.sSeq,V.Local.sDate,V.Local.sSQL)
+	F.Data.DataTable.CreateFromSQL("dtHist","conts",V.Local.sSQL)
+	
+	F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtHist.RowCount--,1)
+		F.Intrinsic.String.Format(V.DataTable.dtHist(V.Local.iCnt).Cal_Date!FieldValTrim,"YYYYMMDD",V.Local.sDateFormat)
+		F.Data.DataTable.SetValue("dtHist",V.Local.iCnt,"Cal_Date",V.Local.sDateFormat)
+		
+		F.Intrinsic.String.Format(V.DataTable.dtHist(V.Local.iCnt).Cal_Due!FieldValTrim,"YYYYMMDD",V.Local.sDateFormat)
+		F.Data.DataTable.SetValue("dtHist",V.Local.iCnt,"Cal_Due",V.Local.sDateFormat)
+	F.Intrinsic.Control.Next(V.Local.iCnt)
+	
+	F.Intrinsic.Control.If(V.DataTable.dtHist.RowCount,<>,0)
+		F.Data.DataTable.Merge("dtHist","dtMainHist",True,2)
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.Close("dtHist")
+	
+F.Intrinsic.Control.CallSub(ODBC,"State","CLOSE")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.txtHistWOSeq_LostFocus.End
+
+Program.Sub.cmdHistWOBrw_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sRet.Declare
+V.Local.sSQL.Declare
+V.Local.sDate.Declare
+
+F.Intrinsic.Control.CallSub(txtHistWOSeq_Change)
+
+F.Intrinsic.String.Format(V.Screen.fmGaugeIssue!dtpHistWO.Value,"YYYYMMDD",V.Local.sDate)
+
+F.Intrinsic.Control.CallSub(ODBC,"State","OPEN")
+F.Intrinsic.String.Build("Select Distinct WO,WO_Suff,WO_Seq from GCG_6437_GAUGE_TRACK where Iss_Date = '{0}'",V.Local.sDate,V.Local.sSQL)
+F.Intrinsic.UI.Browser("Select WO and Sequence","conts",V.Local.sSQL,"Work Order*!*Work Order Suffix*!*Work Order Sequence","500*!*500*!*500",7500,7500,V.Local.sRet)
+F.Intrinsic.Control.CallSub(ODBC,"State","CLOSE")
+
+F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+
+Gui.fmGaugeIssue.txtHistWO.Text(V.Local.sRet(0).Trim)
+Gui.fmGaugeIssue.txtHistWOSuff.Text(V.Local.sRet(1).Trim)
+Gui.fmGaugeIssue.txtHistWOSeq.Text(V.Local.sRet(2).Trim)
+
+V.Local.sRet.Redim(0,0)
+
+F.Intrinsic.Control.CallSub(txtHistWOSeq_LostFocus)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdHistWOBrw_Click.End
+
+Program.Sub.txtHistWO_KeyPressEnter.Start
+F.Intrinsic.Control.Try
+V.Local.sScanned.Declare
+V.Local.bScanChk.Declare
+V.Local.sWO.Declare
+V.Local.sWO_Suff.Declare
+V.Local.sWO_Seq.Declare
+
+V.Local.sScanned.Set(V.Screen.fmGaugeIssue!txtHistWO.Text)
+
+F.Intrinsic.String.IsInString(V.Local.sScanned,"$%",True,V.Local.bScanChk)
+
+F.Intrinsic.Control.If(V.Local.bScanChk,=,True)
+	F.Intrinsic.String.Replace(V.Local.sScanned,"$%","",V.Local.sScanned)
+	F.Intrinsic.String.Left(V.Local.sScanned,6,V.Local.sWO)
+	F.Intrinsic.String.Mid(V.Local.sScanned,7,3,V.Local.sWO_Suff)
+	F.Intrinsic.String.Right(V.Local.sScanned,6,V.Local.sWO_Seq)
+	
+	Gui.fmGaugeIssue.txtHistWO.Text(V.Local.sWO)
+	Gui.fmGaugeIssue.txtHistWOSuff.Text(V.Local.sWO_Suff)
+	Gui.fmGaugeIssue.txtHistWOSeq.Text(V.Local.sWO_Seq)
+	F.Intrinsic.Control.CallSub(txtHistWOSeq_LostFocus)
+	Gui.fmGaugeIssue.cmdHistWOBrw.SetFocus(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.txtHistWO_KeyPressEnter.End
+
+Program.Sub.cmdSelAll_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sDate.Declare
+V.Local.sFilter.Declare
+
+F.Intrinsic.Control.If(V.DataTable.dtMainHist.RowCount,=,0)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!cmdSelAll.Caption,=,"Select All")
+	F.Intrinsic.String.Format(V.Ambient.Date,"YYYYMMDD",V.Local.sDate)
+	F.Intrinsic.String.Build("Cal_Due >= '{0}'",V.Local.sDate,V.Local.sFilter)
+	
+	F.Data.DataView.Create("dtMainHist","dvHistCalDt",22,V.Local.sFilter,"")
+	F.Data.DataView.SetValue("dtMainHist","dvHistCalDt",-1,"Sel",1)
+	F.Data.DataView.Close("dtMainHist","dvHistCalDt")
+	Gui.fmGaugeIssue.cmdSelAll.Caption("Deselect All")
+F.Intrinsic.Control.Else
+	F.Data.DataTable.SetValue("dtMainHist",-1,"Sel",0)
+	Gui.fmGaugeIssue.cmdSelAll.Caption("Select All")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdSelAll_Click.End
+
+Program.Sub.ClearForm.Start
+F.Intrinsic.Control.Try
+V.Local.iRet.Declare
+
+F.Intrinsic.Control.If(V.Args.CONTROLNAME,<>,"CMDCOMMIT")
+	F.Intrinsic.UI.Msgbox("Are you sure?","",4,V.Local.iRet)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.iRet,=,7)
+	F.Intrinsic.Control.BlockEvents
+	F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!chkKBGauge.Value,=,1)
+		Gui.fmGaugeIssue.ddlKBGauge.SetFocus(True)
+	F.Intrinsic.Control.Else
+		Gui.fmGaugeIssue.txtGaSN.SetFocus(True)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.UnBlockEvents
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Data.DataTable.DeleteRow("dtMainCurr",-1)
+F.Data.DataTable.DeleteRow("dtMainHist",-1)
+
+F.Data.DataTable.AcceptChanges("dtMainCurr")
+F.Data.DataTable.AcceptChanges("dtMainHist")
+
+F.Intrinsic.Control.BlockEvents
+Gui.fmGaugeIssue.txtWO.Text("")
+Gui.fmGaugeIssue.txtWOSuff.Text("")
+Gui.fmGaugeIssue.txtWOSeq.Text("")
+Gui.fmGaugeIssue.dtpToday.Value(V.Ambient.Date)
+Gui.fmGaugeIssue.txtTime.Text("")
+Gui.fmGaugeIssue.ddlKBGauge.ListIndex(0)
+Gui.fmGaugeIssue.txtGaSN.Text("")
+Gui.fmGaugeIssue.txtDesc1.Text("")
+Gui.fmGaugeIssue.txtDesc2.Text("")
+Gui.fmGaugeIssue.txtDesc3.Text("")
+Gui.fmGaugeIssue.txtCalDt.Text("")
+Gui.fmGaugeIssue.txtCalDue.Text("")
+Gui.fmGaugeIssue.txtHistWO.Text("")
+Gui.fmGaugeIssue.txtHistWOSeq.Text("")
+Gui.fmGaugeIssue.txtHistWOSuff.Text("")
+Gui.fmGaugeIssue.dtpHistWO.Value(V.Ambient.Date)
+Gui.fmGaugeIssue.dtpToday.Value(V.Ambient.Date)
+F.Intrinsic.Control.UnBlockEvents
+
+Gui.fmGaugeIssue.chkKBGauge.Value(1)
+Gui.fmGaugeIssue.chkOutGauge.Value(0)
+
+Gui.fmGaugeIssue.frameGaOrig.Enabled(False)
+Gui.fmGaugeIssue.frameGauge.Enabled(False)
+
+Gui.fmGaugeIssue.chkGaToWo.Value(0)
+Gui.fmGaugeIssue.chkInspToGa.Value(0)
+Gui.fmGaugeIssue.chkRepRemDt.Value(0)
+Gui.fmGaugeIssue.chkWOToGa.Value(0)
+Gui.fmGaugeIssue.txtRepWOSuffSeq.Text("")
+Gui.fmGaugeIssue.txtRepGaSN.Text("")
+Gui.fmGaugeIssue.dtpRepEnd.Value(V.Ambient.Date)
+Gui.fmGaugeIssue.dtpRepStrt.Value(V.Ambient.Date)
+
+Gui.fmGaugeIssue.txtWO.SetFocus(True)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.ClearForm.End
+
+Program.Sub.cmdRepWOBrw_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sRet.Declare
+
+F.Intrinsic.Control.CallSub(ODBC,"State","OPEN")
+F.Intrinsic.UI.Browser("Select WO and Sequence","conts","Select JOB,SUFFIX,SEQ from V_JOB_OPERATIONS where LMO = 'L' and  FLAG_CLOSED <> 'Y' order by JOB,SUFFIX,SEQ","JOB*!*SUFFIX*!*SEQ","750*!*500*!*500",10000,10000,V.Local.sRet)
+F.Intrinsic.Control.CallSub(ODBC,"State","CLOSE")
+
+F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Replace(V.Local.sRet,"*!*","-",V.Local.sRet)
+
+Gui.fmGaugeIssue.txtRepWOSuffSeq.Text(V.Local.sRet.Trim)
+
+F.Intrinsic.Control.CallSub(txtWOSeq_LostFocus)
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdRepWOBrw_Click.End
+
+Program.Sub.cmdPrint_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sWO.Declare
+V.Local.sWOSuff.Declare
+V.Local.sWOSeq.Declare
+V.Local.sJSS.Declare
+V.Local.sRepType.Declare
+V.Local.sGaSN.Declare
+V.Local.sStrtDt.Declare
+V.Local.sEndDt.Declare
+V.Local.sSQL.Declare
+V.Local.sParams.Declare
+V.Local.sValues.Declare
+V.Local.iReportID.Declare
+V.Local.iBIRunID.Declare
+V.Local.iLogID.Declare
+V.Local.iRet.Declare
+V.Local.bNoDates.Declare
+
+F.Intrinsic.String.Format(V.Screen.fmGaugeIssue!dtpRepStrt.Value,"M/D/YYYY",V.Local.sStrtDt)
+F.Intrinsic.String.Format(V.Screen.fmGaugeIssue!dtpRepEnd.Value,"M/D/YYYY",V.Local.sEndDt)
+
+F.Intrinsic.Control.If(V.Screen.fmGaugeIssue!chkGaToWo.Value,=,1)
+	V.Local.sJSS.Set(V.Screen.fmGaugeIssue!txtRepWOSuffSeq.Text.Trim)
+	F.Intrinsic.String.Split(V.Local.sJSS,"-",V.Local.sJSS)
+	V.Local.sWO.Set(V.Local.sJSS(0))
+	V.Local.sWOSuff.Set(V.Local.sJSS(1))
+	V.Local.sWOSeq.Set(V.Local.sJSS(2))
+	V.Local.sRepType.Set("GaToWo")	
+F.Intrinsic.Control.ElseIf(V.Screen.fmGaugeIssue!chkWOToGa.Value,=,1)
+	V.Local.sGaSN.Set(V.Screen.fmGaugeIssue!txtRepGaSN.Text.Trim)
+	V.Local.sRepType.Set("WoToGa")
+F.Intrinsic.Control.ElseIf(V.Screen.fmGaugeIssue!chkInspToGa.Value,=,1)
+	V.Local.sGaSN.Set(V.Screen.fmGaugeIssue!txtRepGaSN.Text.Trim)
+	V.Local.sRepType.Set("InspToGa")
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Please select at least one report","Error")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.SelectCase(V.Local.sRepType)
+	F.Intrinsic.Control.Case("GaToWo")
+		F.Intrinsic.Control.If(V.Local.sWO.Trim,=,"")
+			F.Intrinsic.UI.Msgbox("Please select a work order for this report"."Error!")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+		
+		F.Global.BI.GetRunID(V.Local.iBIRunID)
+		
+		F.Global.BI.GetIDFromName("GCG_6437_GaToWO.rpt",V.Local.iReportID)
+		F.Global.BI.StartLogging(V.Local.iBIRunID,V.Local.iReportID,-1,"",V.Local.iLogID)
+		F.Global.BI.StopLogging(V.Local.iLogID)
+		V.Local.sParams.Set("StrtDate*!*EndDt*!*Seq*!*WO*!*Suff")
+		F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}",V.Local.sStrtDt,V.Local.sEndDt,V.Local.sWOSeq,V.Local.sWO,V.Local.sWOSuff,V.Local.sValues)
+		
+		F.Global.BI.RunReportPreProcessor(V.Local.iBIRunID,V.Local.iLogID,V.Local.sParams,V.Local.sValues,"GCG_6437_GaToWO.rpt",16,False,"",-1,"",-1,"","",V.Local.iRet)
+		
+		Gui.fmGaugeIssue.txtRepWOSuffSeq.Text("")
+		Gui.fmGaugeIssue.chkGaToWo.Value(0)
+		
+		Gui.fmGaugeIssue.dtpRepStrt.Value(V.Ambient.Date)
+		Gui.fmGaugeIssue.dtpRepEnd.Value(V.Ambient.Date)
+
+	F.Intrinsic.Control.Case("WoToGa")
+		F.Intrinsic.Control.If(V.Local.sGaSN.Trim,=,"")
+			F.Intrinsic.UI.Msgbox("Please select a gauge for this report"."Error!")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+		
+		F.Global.BI.GetRunID(V.Local.iBIRunID)
+		
+		F.Global.BI.GetIDFromName("GCG_6437_WOToGa.rpt",V.Local.iReportID)
+		F.Global.BI.StartLogging(V.Local.iBIRunID,V.Local.iReportID,-1,"",V.Local.iLogID)
+		F.Global.BI.StopLogging(V.Local.iLogID)
+		V.Local.sParams.Set("StrtDt*!*EndDt*!*GaugeSN")
+		F.Intrinsic.String.Build("{0}*!*{1}*!*{2}",V.Local.sStrtDt,V.Local.sEndDt,V.Local.sGaSN,V.Local.sValues)
+		
+		F.Global.BI.RunReportPreProcessor(V.Local.iBIRunID,V.Local.iLogID,V.Local.sParams,V.Local.sValues,"GCG_6437_WOToGa.rpt",16,False,"",-1,"",-1,"","",V.Local.iRet)
+		
+		Gui.fmGaugeIssue.txtRepGaSN.Text("")
+		Gui.fmGaugeIssue.chkWOToGa.Value(0)
+		
+		Gui.fmGaugeIssue.dtpRepStrt.Value(V.Ambient.Date)
+		Gui.fmGaugeIssue.dtpRepEnd.Value(V.Ambient.Date)
+	F.Intrinsic.Control.Case("InspToGa")
+		V.Local.bNoDates.Set(V.Screen.fmGaugeIssue!chkRepRemDt.Value)
+		F.Global.BI.GetRunID(V.Local.iBIRunID)
+		
+		F.Global.BI.GetIDFromName("GCG_6437_InspToGa.rpt",V.Local.iReportID)
+		F.Global.BI.StartLogging(V.Local.iBIRunID,V.Local.iReportID,-1,"",V.Local.iLogID)
+		F.Global.BI.StopLogging(V.Local.iLogID)
+		V.Local.sParams.Set("StrtDt*!*EndDt*!*GaugeSN*!*NoDates")
+		F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}",V.Local.sStrtDt,V.Local.sEndDt,V.Local.sGaSN,V.Local.bNoDates,V.Local.sValues)
+		
+		F.Global.BI.RunReportPreProcessor(V.Local.iBIRunID,V.Local.iLogID,V.Local.sParams,V.Local.sValues,"GCG_6437_InspToGa.rpt",16,False,"",-1,"",-1,"","",V.Local.iRet)
+		
+		Gui.fmGaugeIssue.txtRepGaSN.Text("")
+		Gui.fmGaugeIssue.chkInspToGa.Value(0)
+		
+		Gui.fmGaugeIssue.dtpRepStrt.Value(V.Ambient.Date)
+		Gui.fmGaugeIssue.dtpRepEnd.Value(V.Ambient.Date)
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdPrint_Click.End
+
+Program.Sub.ODBC.Start
+F.Intrinsic.Control.Try
+V.Local.bConState.Declare
+
+V.Local.bConState.Set(V.ODBC.conts.Exists)
+
+F.Intrinsic.Control.SelectCase(V.Args.State)
+	F.Intrinsic.Control.Case("OPEN")
+		F.Intrinsic.Control.If(V.Local.bConState,=,False)
+			F.ODBC.Connection!conts.OpenCompanyConnection
+		F.Intrinsic.Control.EndIf		
+	F.Intrinsic.Control.Case("CLOSE")
+		F.ODBC.Connection!conts.Close
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.ODBC.End
+
+Program.Sub.fmGaugeIssue_UnLoad.Start
+F.Intrinsic.Control.End
+Program.Sub.fmGaugeIssue_UnLoad.End
+
+Program.Sub.Error.Start
+V.Local.sError.Declare
+V.Local.iRet.Declare
+V.Local.sSep.Declare
+
+F.Intrinsic.String.Build("-------------------------------------------------------------------------------------",,V.Local.sSep)
+F.Intrinsic.String.Build("({5}-{6}){0}{7}{0}Project: {4}{0}{7}{0}Sub: {1}{0}Error: {2}, {3}", V.Ambient.NewLine, V.Args.SubRoutine, V.Args.eNumber, V.Args.eDescription,V.Caller.ScriptFile,V.Ambient.Date, V.Ambient.Time,V.Local.sSep,V.Local.sError)
+F.Intrinsic.UI.Msgbox(V.Local.sError,"Error",V.Local.iRet)
+Program.Sub.Error.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$tsmith$}$20210910140019658$}$xqPbj9atw05FglvzeFsZ9cqXP+qvG6tXyanstevRGbge/RUxOYsMC4MZHCrarPVbD0VFE5sA+Rg=
+Program.Sub.Comments.End
